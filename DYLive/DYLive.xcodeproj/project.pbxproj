@@ -14,6 +14,20 @@
 		B48C4CB51E8CEC28002CD3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CB31E8CEC28002CD3AF /* LaunchScreen.storyboard */; };
 		B48C4CC01E8CEC28002CD3AF /* DYLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CBF1E8CEC28002CD3AF /* DYLiveTests.swift */; };
 		B48C4CCB1E8CEC28002CD3AF /* DYLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CCA1E8CEC28002CD3AF /* DYLiveUITests.swift */; };
+		B49D70F91E8CF34700B73176 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70EA1E8CF34700B73176 /* AppIcon20x20@2x.png */; };
+		B49D70FA1E8CF34700B73176 /* AppIcon20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70EB1E8CF34700B73176 /* AppIcon20x20@3x.png */; };
+		B49D70FB1E8CF34700B73176 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70EC1E8CF34700B73176 /* AppIcon29x29.png */; };
+		B49D70FC1E8CF34700B73176 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70ED1E8CF34700B73176 /* AppIcon29x29@2x.png */; };
+		B49D70FD1E8CF34700B73176 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70EE1E8CF34700B73176 /* AppIcon40x40@2x.png */; };
+		B49D70FE1E8CF34700B73176 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70EF1E8CF34700B73176 /* AppIcon57x57.png */; };
+		B49D70FF1E8CF34700B73176 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F01E8CF34700B73176 /* AppIcon57x57@2x.png */; };
+		B49D71001E8CF34700B73176 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F11E8CF34700B73176 /* AppIcon60x60@2x.png */; };
+		B49D71011E8CF34700B73176 /* AppIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F21E8CF34700B73176 /* AppIcon60x60@3x.png */; };
+		B49D71021E8CF34700B73176 /* Default1136.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F41E8CF34700B73176 /* Default1136.png */; };
+		B49D71031E8CF34700B73176 /* Default1334.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F51E8CF34700B73176 /* Default1334.png */; };
+		B49D71041E8CF34700B73176 /* Default1472.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F61E8CF34700B73176 /* Default1472.png */; };
+		B49D71051E8CF34700B73176 /* Default2048.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F71E8CF34700B73176 /* Default2048.png */; };
+		B49D71061E8CF34700B73176 /* Default960.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F81E8CF34700B73176 /* Default960.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,20 @@
 		B48C4CC61E8CEC28002CD3AF /* DYLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48C4CCA1E8CEC28002CD3AF /* DYLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYLiveUITests.swift; sourceTree = "<group>"; };
 		B48C4CCC1E8CEC28002CD3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49D70EA1E8CF34700B73176 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@2x.png"; sourceTree = "<group>"; };
+		B49D70EB1E8CF34700B73176 /* AppIcon20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@3x.png"; sourceTree = "<group>"; };
+		B49D70EC1E8CF34700B73176 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		B49D70ED1E8CF34700B73176 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		B49D70EE1E8CF34700B73176 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		B49D70EF1E8CF34700B73176 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		B49D70F01E8CF34700B73176 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		B49D70F11E8CF34700B73176 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		B49D70F21E8CF34700B73176 /* AppIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@3x.png"; sourceTree = "<group>"; };
+		B49D70F41E8CF34700B73176 /* Default1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default1136.png; sourceTree = "<group>"; };
+		B49D70F51E8CF34700B73176 /* Default1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default1334.png; sourceTree = "<group>"; };
+		B49D70F61E8CF34700B73176 /* Default1472.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default1472.png; sourceTree = "<group>"; };
+		B49D70F71E8CF34700B73176 /* Default2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default2048.png; sourceTree = "<group>"; };
+		B49D70F81E8CF34700B73176 /* Default960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default960.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +105,7 @@
 		B48C4C9E1E8CEC28002CD3AF = {
 			isa = PBXGroup;
 			children = (
+				B49D70E81E8CF34700B73176 /* DYResource */,
 				B48C4CA91E8CEC28002CD3AF /* DYLive */,
 				B48C4CBE1E8CEC28002CD3AF /* DYLiveTests */,
 				B48C4CC91E8CEC28002CD3AF /* DYLiveUITests */,
@@ -123,6 +152,43 @@
 				B48C4CCC1E8CEC28002CD3AF /* Info.plist */,
 			);
 			path = DYLiveUITests;
+			sourceTree = "<group>";
+		};
+		B49D70E81E8CF34700B73176 /* DYResource */ = {
+			isa = PBXGroup;
+			children = (
+				B49D70E91E8CF34700B73176 /* icon */,
+				B49D70F31E8CF34700B73176 /* launch */,
+			);
+			path = DYResource;
+			sourceTree = "<group>";
+		};
+		B49D70E91E8CF34700B73176 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				B49D70EA1E8CF34700B73176 /* AppIcon20x20@2x.png */,
+				B49D70EB1E8CF34700B73176 /* AppIcon20x20@3x.png */,
+				B49D70EC1E8CF34700B73176 /* AppIcon29x29.png */,
+				B49D70ED1E8CF34700B73176 /* AppIcon29x29@2x.png */,
+				B49D70EE1E8CF34700B73176 /* AppIcon40x40@2x.png */,
+				B49D70EF1E8CF34700B73176 /* AppIcon57x57.png */,
+				B49D70F01E8CF34700B73176 /* AppIcon57x57@2x.png */,
+				B49D70F11E8CF34700B73176 /* AppIcon60x60@2x.png */,
+				B49D70F21E8CF34700B73176 /* AppIcon60x60@3x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		B49D70F31E8CF34700B73176 /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				B49D70F41E8CF34700B73176 /* Default1136.png */,
+				B49D70F51E8CF34700B73176 /* Default1334.png */,
+				B49D70F61E8CF34700B73176 /* Default1472.png */,
+				B49D70F71E8CF34700B73176 /* Default2048.png */,
+				B49D70F81E8CF34700B73176 /* Default960.png */,
+			);
+			path = launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +302,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48C4CB51E8CEC28002CD3AF /* LaunchScreen.storyboard in Resources */,
+				B49D70FE1E8CF34700B73176 /* AppIcon57x57.png in Resources */,
+				B49D71021E8CF34700B73176 /* Default1136.png in Resources */,
 				B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */,
+				B49D71031E8CF34700B73176 /* Default1334.png in Resources */,
+				B49D71051E8CF34700B73176 /* Default2048.png in Resources */,
+				B49D71061E8CF34700B73176 /* Default960.png in Resources */,
+				B49D71041E8CF34700B73176 /* Default1472.png in Resources */,
+				B49D70FD1E8CF34700B73176 /* AppIcon40x40@2x.png in Resources */,
+				B49D71001E8CF34700B73176 /* AppIcon60x60@2x.png in Resources */,
+				B49D70F91E8CF34700B73176 /* AppIcon20x20@2x.png in Resources */,
+				B49D70FC1E8CF34700B73176 /* AppIcon29x29@2x.png in Resources */,
+				B49D71011E8CF34700B73176 /* AppIcon60x60@3x.png in Resources */,
+				B49D70FF1E8CF34700B73176 /* AppIcon57x57@2x.png in Resources */,
 				B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */,
+				B49D70FA1E8CF34700B73176 /* AppIcon20x20@3x.png in Resources */,
+				B49D70FB1E8CF34700B73176 /* AppIcon29x29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +596,7 @@
 				B48C4CD11E8CEC28002CD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B48C4CD21E8CEC28002CD3AF /* Build configuration list for PBXNativeTarget "DYLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +605,7 @@
 				B48C4CD41E8CEC28002CD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B48C4CD51E8CEC28002CD3AF /* Build configuration list for PBXNativeTarget "DYLiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +614,7 @@
 				B48C4CD71E8CEC28002CD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
