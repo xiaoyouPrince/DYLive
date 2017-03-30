@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B404388E1E8D04EE00756453 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B404388C1E8D04EE00756453 /* Home.storyboard */; };
+		B40438981E8D05D400756453 /* Living.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40438961E8D05D400756453 /* Living.storyboard */; };
+		B404389A1E8D05EC00756453 /* Fous.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40438991E8D05EC00756453 /* Fous.storyboard */; };
+		B404389D1E8D060800756453 /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B404389B1E8D060800756453 /* Discovery.storyboard */; };
+		B404389F1E8D061700756453 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B404389E1E8D061700756453 /* Mine.storyboard */; };
 		B48C4CAB1E8CEC28002CD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */; };
 		B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */; };
 		B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CB11E8CEC28002CD3AF /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B404388D1E8D04EE00756453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYLive/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
+		B40438971E8D05D400756453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYLive/Base.lproj/Living.storyboard; sourceTree = SOURCE_ROOT; };
+		B40438991E8D05EC00756453 /* Fous.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fous.storyboard; sourceTree = "<group>"; };
+		B404389C1E8D060800756453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYLive/Base.lproj/Discovery.storyboard; sourceTree = SOURCE_ROOT; };
+		B404389E1E8D061700756453 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		B48C4CA71E8CEC28002CD3AF /* DYLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48C4CAF1E8CEC28002CD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,7 +136,6 @@
 			children = (
 				B49D71071E8CF93100B73176 /* Classes */,
 				B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */,
-				B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */,
 				B48C4CB11E8CEC28002CD3AF /* Assets.xcassets */,
 				B48C4CB31E8CEC28002CD3AF /* LaunchScreen.storyboard */,
 				B48C4CB61E8CEC28002CD3AF /* Info.plist */,
@@ -227,6 +236,12 @@
 		B49D710B1E8CF93100B73176 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */,
+				B404389E1E8D061700756453 /* Mine.storyboard */,
+				B404389B1E8D060800756453 /* Discovery.storyboard */,
+				B40438991E8D05EC00756453 /* Fous.storyboard */,
+				B40438961E8D05D400756453 /* Living.storyboard */,
+				B404388C1E8D04EE00756453 /* Home.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -363,22 +378,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48C4CB51E8CEC28002CD3AF /* LaunchScreen.storyboard in Resources */,
+				B40438981E8D05D400756453 /* Living.storyboard in Resources */,
 				B49D70FE1E8CF34700B73176 /* AppIcon57x57.png in Resources */,
 				B49D71021E8CF34700B73176 /* Default1136.png in Resources */,
+				B404388E1E8D04EE00756453 /* Home.storyboard in Resources */,
 				B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */,
 				B49D71031E8CF34700B73176 /* Default1334.png in Resources */,
 				B49D71051E8CF34700B73176 /* Default2048.png in Resources */,
 				B49D71061E8CF34700B73176 /* Default960.png in Resources */,
 				B49D71041E8CF34700B73176 /* Default1472.png in Resources */,
 				B49D70FD1E8CF34700B73176 /* AppIcon40x40@2x.png in Resources */,
+				B404389F1E8D061700756453 /* Mine.storyboard in Resources */,
 				B49D71001E8CF34700B73176 /* AppIcon60x60@2x.png in Resources */,
 				B49D70F91E8CF34700B73176 /* AppIcon20x20@2x.png in Resources */,
 				B49D70FC1E8CF34700B73176 /* AppIcon29x29@2x.png in Resources */,
+				B404389D1E8D060800756453 /* Discovery.storyboard in Resources */,
 				B49D71011E8CF34700B73176 /* AppIcon60x60@3x.png in Resources */,
 				B49D70FF1E8CF34700B73176 /* AppIcon57x57@2x.png in Resources */,
 				B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */,
 				B49D70FA1E8CF34700B73176 /* AppIcon20x20@3x.png in Resources */,
 				B49D70FB1E8CF34700B73176 /* AppIcon29x29.png in Resources */,
+				B404389A1E8D05EC00756453 /* Fous.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,12 +459,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B404388C1E8D04EE00756453 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B404388D1E8D04EE00756453 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		B40438961E8D05D400756453 /* Living.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B40438971E8D05D400756453 /* Base */,
+			);
+			name = Living.storyboard;
+			sourceTree = "<group>";
+		};
+		B404389B1E8D060800756453 /* Discovery.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B404389C1E8D060800756453 /* Base */,
+			);
+			name = Discovery.storyboard;
+			sourceTree = "<group>";
+		};
 		B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B48C4CAF1E8CEC28002CD3AF /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		B48C4CB31E8CEC28002CD3AF /* LaunchScreen.storyboard */ = {
