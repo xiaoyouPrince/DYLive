@@ -196,6 +196,7 @@
 				B49D71091E8CF93100B73176 /* Home */,
 				B49D710A1E8CF93100B73176 /* Live */,
 				B49D71081E8CF93100B73176 /* Follow */,
+				B49D710E1E8CFB0900B73176 /* Discovery */,
 				B49D710C1E8CF93100B73176 /* Profile */,
 				B49D710D1E8CF93100B73176 /* Tools */,
 			);
@@ -242,6 +243,13 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		B49D710E1E8CFB0900B73176 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discovery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
