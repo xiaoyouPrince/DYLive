@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tIl-z3-qv9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tIl-z3-qv9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="EtT-Wu-9gj">
             <objects>
-                <viewController id="CIU-FL-Loo" sceneMemberID="viewController">
+                <viewController id="CIU-FL-Loo" customClass="HomeViewController" customModule="DYLive" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0fR-1U-ppi"/>
                         <viewControllerLayoutGuide type="bottom" id="Bgb-r6-RKg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Iu9-X1-WuY">
+                    <view key="view" contentMode="scaleToFill" id="Iu9-X1-WuY" customClass="Home">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,7 +34,6 @@
                     <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="3qv-yf-rZ5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ldd-PQ-Fbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
