@@ -45,23 +45,11 @@ extension HomeViewController{
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoItem)
         
         // 右边items
-        let historyBtn = UIButton()
-        historyBtn.setImage(UIImage(named:"image_my_history"), for: .normal)
-        historyBtn.setImage(UIImage(named:"Image_my_history_click"), for: .highlighted)
-        historyBtn.frame = CGRect(origin: CGPoint(x:0 ,y:0), size: size)
-        let historyItem = UIBarButtonItem(customView: historyBtn)
+        let historyItem = UIBarButtonItem.creatItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
         
-        let searchBtn = UIButton()
-        searchBtn.setImage(UIImage(named:"btn_search"), for: .normal)
-        searchBtn.setImage(UIImage(named:"btn_search_clicked"), for: .highlighted)
-        searchBtn.frame = CGRect(origin: CGPoint(x:0 ,y:0), size: size)
-        let searchItem = UIBarButtonItem(customView: searchBtn)
+        let searchItem = UIBarButtonItem.creatItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
         
-        let qrcodeBtn = UIButton()
-        qrcodeBtn.setImage(UIImage(named:"Image_scan"), for: .normal)
-        qrcodeBtn.setImage(UIImage(named:"Image_scan_click"), for: .highlighted)
-        qrcodeBtn.frame = CGRect(origin: CGPoint(x:0 ,y:0), size: size)
-        let qrcodeItem = UIBarButtonItem(customView: qrcodeBtn)
+        let qrcodeItem = UIBarButtonItem.creatItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
 
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
