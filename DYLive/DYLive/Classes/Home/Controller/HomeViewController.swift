@@ -8,6 +8,11 @@
 
 import UIKit
 
+let titleViewH : CGFloat = 44
+
+
+
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -41,10 +46,11 @@ extension HomeViewController{
         view.addSubview(creatPageTitleView())
     }
     
+    
     // MARK:-定义个有返回值的私有函数
     private func creatPageTitleView() -> PageTitleView{
 
-            let titleFrame = CGRect(x: 0, y: 64, width: 375, height: 44)
+            let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: titleViewH)
             let titles = ["推荐","游戏","娱乐","趣玩"];
             
             // 创建对应的titleView
