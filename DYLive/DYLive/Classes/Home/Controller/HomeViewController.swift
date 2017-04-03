@@ -13,6 +13,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // MARK:-通过懒加载方式创建一个PageTitleView -- > 闭包的方式创建
+        var pageTitleView : PageTitleView ;
+        
+        
+        // MARK:- 创建UI
         setupUI()
         
     }
@@ -30,6 +36,23 @@ extension HomeViewController{
         
         // 1. 设置导航栏
         setupNavBar()
+        
+        // 2. 添加PageTitleView
+        view.addSubview(creatPageTitleView())
+    }
+    
+    // MARK:-定义个有返回值的私有函数
+    private func creatPageTitleView() -> PageTitleView{
+
+            let titleFrame = CGRect(x: 0, y: 64, width: 375, height: 44)
+            let titles = ["推荐","游戏","娱乐","趣玩"];
+            
+            // 创建对应的titleView
+            let titleView = PageTitleView.init(frame: titleFrame, titles: titles)
+            
+            titleView.backgroundColor = UIColor.red
+            
+            return titleView
     }
     
     
