@@ -14,20 +14,20 @@ class PageContentView: UIView {
     
     // MARK:-定义属性
     fileprivate var childVcs : [UIViewController]
-    fileprivate var parentVc : UIViewController
+    fileprivate weak var parentVc : UIViewController? //防止强引用导致循环引用
     
-    // MARK:-闭包加载collectionView
-    fileprivate lazy var collectionView : UICollectionView = {
+    // MARK:-闭包加载collectionView -- 闭包内要对self进行弱化引用，防止循环引用
+    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
         
         // 1.创建layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
         
         
-        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: (self?.bounds)!, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
@@ -73,7 +73,7 @@ extension PageContentView{
         for childVc in childVcs {
             
             // 1.添加子控制器
-            self.parentVc.addChildViewController(childVc)
+            self.parentVc?.addChildViewController(childVc)
             
             // 2.设置内部的collectionview
             addSubview(collectionView)

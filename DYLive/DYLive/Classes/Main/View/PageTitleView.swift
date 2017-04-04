@@ -28,7 +28,7 @@ class PageTitleView: UIView {
     
     // MARK:-添加子控件scrollview 
     // scrollView 如果别的地方也用到的话，就慵懒加载比较好
-    fileprivate lazy var scrollView : UIScrollView = {
+    fileprivate lazy var scrollView : UIScrollView = {[weak self] in
     
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
