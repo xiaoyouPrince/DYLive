@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
         // MARK:-通过懒加载方式创建一个PageTitleView -- > 闭包的方式创建
         var pageTitleView : PageTitleView ;
         
+        // 关闭系统自动给scrollview添加的那64内边距
+        automaticallyAdjustsScrollViewInsets = false
         
         // MARK:- 创建UI
         setupUI()
