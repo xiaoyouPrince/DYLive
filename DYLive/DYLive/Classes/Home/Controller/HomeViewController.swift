@@ -19,8 +19,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // MARK:-通过懒加载方式创建一个PageTitleView -- > 闭包的方式创建
-        var pageTitleView : PageTitleView ;
+        // MARK:-通过懒加载方式创建一个PageTitleView -- > 闭包的方式创建 -- swift 3.0 对非本地的变量有要求好像，这里不能像UIKit框架中其他控件一样使用
+        var pageTitleView : PageTitleView;
+        var pageContentView : PageContentView
+        
         
         // 关闭系统自动给scrollview添加的那64内边距
         automaticallyAdjustsScrollViewInsets = false
@@ -46,6 +48,9 @@ extension HomeViewController{
         
         // 2. 添加PageTitleView
         view.addSubview(creatPageTitleView())
+        
+        // 3.添加pageContentView
+        view.addSubview(creatPageContentView())
     }
     
     
@@ -61,6 +66,37 @@ extension HomeViewController{
             titleView.backgroundColor = UIColor.red
             
             return titleView
+    }
+    // MARK:-定义个有返回contentView的函数
+    private func creatPageContentView() -> PageContentView{
+        
+        // 1.确定frame
+        let contentY : CGFloat = kStatusBarH + kNavBarH + titleViewH
+        let contentH = kScreenH - contentY
+        let contentFrame = CGRect(x: 0, y: contentY, width: kScreenW, height: contentH)
+        
+        // 2.创建对应的contentView
+        var contentVcs = [UIViewController]()
+        
+        for index in 0..<4 {
+            
+            let childVc = UIViewController()
+            
+            if  index % 2 == 0{
+                childVc.view.backgroundColor = UIColor.green
+            }else
+            {
+                childVc.view.backgroundColor = UIColor.yellow
+            }
+            
+            contentVcs.append(childVc)
+            
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs:contentVcs , parentVc: self)
+        contentView.backgroundColor = UIColor.red
+        
+        return contentView
     }
     
     
