@@ -107,3 +107,17 @@ extension PageContentView : UICollectionViewDataSource{
         return cell
     }
 }
+
+// MARK:-对外暴露的方法
+extension PageContentView{
+    
+    // 告知它滚到哪个控制器去
+    func setCurrnetIndex(currentIndex : Int) {
+        
+        // 实际上修改collectionView的offsetx
+        let positionX = CGFloat(currentIndex) * self.frame.width
+        collectionView.setContentOffset(CGPoint(x:positionX,y:0), animated: false)
+        
+    }
+    
+}
