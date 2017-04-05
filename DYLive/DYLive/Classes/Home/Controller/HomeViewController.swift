@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     
     // MARK: - 懒加载pagetitleView
-    lazy var pageTitleView : PageTitleView = {
+    lazy var pageTitleView : PageTitleView = { [weak self] in
         
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: titleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"];
@@ -60,6 +60,7 @@ class HomeViewController: UIViewController {
         
         let contentView = PageContentView(frame: contentFrame, childVcs:contentVcs , parentVc: self!)
         contentView.backgroundColor = UIColor.red
+        contentView.delegate = self
         
         return contentView
         
@@ -124,5 +125,15 @@ extension HomeViewController : PageTitleViewDelegate {
     }
 }
 
+
+// MARK: - 遵守PageContentView的Delegate方法
+extension HomeViewController : PageContentViewDelegate{
+    
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        // 接收到代理方法之后，通知titleView去处理对应的文字、滑块、颜色等变化
+
+        pageTitleView.setTitleWithProgress(progress : progress, sourceIndex : sourceIndex, targetIndex : targetIndex)
+    }
+}
 
 
