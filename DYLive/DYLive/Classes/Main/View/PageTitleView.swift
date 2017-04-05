@@ -8,9 +8,16 @@
 
 import UIKit
 
+/*
+ 1. 封装PageTitileView --> view：scrollview：Label+手势 & lineView
+ 2. 封装PageContentView --> uicollectionView->横向滚动的cell
+ 3. 处理PageTitleView和PageContentView的逻辑
+ */
+
 
 private let kScrollLineH : CGFloat = 2
 
+// MARK: - 定义自己代理
 protocol PageTitleViewDelegate : class {
     
     // 这里只是方法的定义 --selectIndex index :分别是内部和外部属性
@@ -19,25 +26,17 @@ protocol PageTitleViewDelegate : class {
 }
 
 
+// MARK: - 类的声明
 class PageTitleView: UIView {
-    
-    
-    // MARK:-首页的页面分析
-    // 1. 封装PageTitileView --> view：scrollview：Label+手势 & lineView
-    // 2. 封装PageContentView --> uicollectionView->横向滚动的cell
-    // 3. 处理PageTitleView和PageContentView的逻辑
-    
-    // MARK:-自定义属性
-    // MARK:-自定义的titles数组
+
+    // MARK: - 自定义属性
     fileprivate var titles : [String]
     fileprivate var titleLabels : [UILabel] = [UILabel]()
     fileprivate var currentIndex : Int = 0 // 设置默认的当前下标为0
     weak var delegate : PageTitleViewDelegate?
     
     
-    // MARK:-懒加载属性
-    // MARK:-添加子控件scrollview 
-    // scrollView 如果别的地方也用到的话，就慵懒加载比较好
+    // MARK: - 懒加载属性
     fileprivate lazy var scrollView : UIScrollView = {[weak self] in
     
         let scrollView = UIScrollView()
@@ -47,7 +46,6 @@ class PageTitleView: UIView {
         
         return scrollView
     }();
-    
     fileprivate lazy var scrollLine : UIView = {[weak self] in
         
         let scrollLine = UIView()
@@ -57,8 +55,7 @@ class PageTitleView: UIView {
     }();
     
     
-    // MARK:-自定制PageTitleView的构造方法
-    // 自定义的构造方法，传入frame和对应的titles
+    // MARK: - 自定制PageTitleView的构造方法
     init(frame: CGRect, titles:[String]) {
         
         // 1.给自己的titles赋值
@@ -68,7 +65,6 @@ class PageTitleView: UIView {
         super.init(frame:frame)
         
         // 3.创建UI 
-        // MARK:-为什么要在这里面写，我也没有搞清楚---反正是外面写的不对
         setupUI()
         
     }
@@ -81,7 +77,7 @@ class PageTitleView: UIView {
 }
 
 
-// MARK:-设置UI
+// MARK: - 设置UI
 extension PageTitleView{
     
     
@@ -101,7 +97,7 @@ extension PageTitleView{
     }
     
     
-    // MARK:-添加label
+    // MARK: - 添加label
     private func setupTitleLabels(){
         
         // 0.对于有些只需要设置一遍的东西，放到外面来
@@ -139,7 +135,7 @@ extension PageTitleView{
         }
         
     }
-    // MARK:- 设置底线 和 可以滚动的线
+    // MARK: - 设置底线 和 可以滚动的线
     private func setupBottomLineAndScrollLines(){
         
         let bottomLine = UIView()
@@ -158,7 +154,8 @@ extension PageTitleView{
     }
 }
 
-// MARK:-监听Label的点击 -- 必须使用@objc
+
+// MARK: - 监听Label的点击 -- 必须使用@objc
 extension PageTitleView{
     
     @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer){

@@ -12,7 +12,7 @@ private let titleViewH : CGFloat = 44
 
 
 
-
+// MARK: - 类的声明
 class HomeViewController: UIViewController {
     
     
@@ -32,9 +32,7 @@ class HomeViewController: UIViewController {
         return titleView
         
     }()
-    
     // MARK:-懒加载一个pageContentView
-    // MARK:-通过懒加载方式创建一个PageTitleView -- > 闭包的方式创建 -- swift 3.0 对非本地的变量有要求好像，这里不能像UIKit框架中其他控件一样使用
     lazy var pageContentView : PageContentView = { [weak self] in
         
         // 1.确定frame
@@ -83,9 +81,7 @@ class HomeViewController: UIViewController {
 
 
 // Mark: - 创建首页UI页面
-// 对首页controller的扩展，防止在主类里面写太多代码，
 extension HomeViewController{
-    
     
     // swift 3.0 之后的特性
     fileprivate func setupUI(){
@@ -94,62 +90,11 @@ extension HomeViewController{
         setupNavBar()
         
         // 2. 添加PageTitleView
-//        view.addSubview(creatPageTitleView())
         view.addSubview(pageTitleView)
         
         // 3.添加pageContentView
-//        view.addSubview(creatPageContentView())
         view.addSubview(pageContentView)
     }
-    
-    
-//    // MARK:-定义个有返回值的私有函数
-//    fileprivate func creatPageTitleView() -> PageTitleView{
-//
-//            let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavBarH, width: kScreenW, height: titleViewH)
-//            let titles = ["推荐","游戏","娱乐","趣玩"];
-//            
-//            // 创建对应的titleView
-//            let titleView = PageTitleView.init(frame: titleFrame, titles: titles)
-//            titleView.backgroundColor = UIColor.red
-//        
-//            // 成为代理
-//            titleView.delegate = self //因为在titleView中已经进行 ？ 处理了，所以这里不写 ？ 否则代理设置不成功
-//        
-//            return titleView
-//    }
-//    // MARK:-定义个有返回contentView的函数
-//    fileprivate func creatPageContentView() -> PageContentView{
-//        
-//        // 1.确定frame
-//        let contentY : CGFloat = kStatusBarH + kNavBarH + titleViewH
-//        let contentH = kScreenH - contentY
-//        let contentFrame = CGRect(x: 0, y: contentY, width: kScreenW, height: contentH)
-//        
-//        // 2.创建对应的contentView
-//        var contentVcs = [UIViewController]()
-//        
-//        for index in 0..<4 {
-//            
-//            let childVc = UIViewController()
-//            
-//            if  index % 2 == 0{
-//                childVc.view.backgroundColor = UIColor.green
-//            }else
-//            {
-//                childVc.view.backgroundColor = UIColor.yellow
-//            }
-//            
-//            contentVcs.append(childVc)
-//            
-//        }
-//        
-//        let contentView = PageContentView(frame: contentFrame, childVcs:contentVcs , parentVc: self)
-//        contentView.backgroundColor = UIColor.red
-//        
-//        return contentView
-//    }
-    
     
     fileprivate func setupNavBar(){
         
@@ -168,14 +113,13 @@ extension HomeViewController{
     }
 }
 
+
 // MARK:-遵循PageTitleViewDelegate
 extension HomeViewController : PageTitleViewDelegate {
     
     func pageTitleView(titleView: PageTitleView, selectIndex index: Int) {
-//        print(index)
         
         // 通知contentView修改对应的Index
-        
         pageContentView.setCurrnetIndex(currentIndex: index)
     }
 }

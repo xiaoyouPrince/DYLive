@@ -6,10 +6,19 @@
 //  Copyright © 2017年 xiaoyouPrince. All rights reserved.
 //
 
+/*
+ 页面UI分析
+ 1.内部传入几个对应的自控制器，有父控制器统一管理
+ 2.具体展示通过collectionView来展示每个子控制器的view
+ 3.父控制器来统一管理和调节 titleView 和 contentView的逻辑
+ 
+ */
+
 import UIKit
 
 private let cellID : String = "CellID"
 
+// MARK:-类的声明
 class PageContentView: UIView {
     
     // MARK:-定义属性
@@ -58,9 +67,6 @@ class PageContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-    
 }
 
 
@@ -82,6 +88,7 @@ extension PageContentView{
     }
     
 }
+
 
 // MARK:-遵守collectionVIew的DataSource代理
 extension PageContentView : UICollectionViewDataSource{
@@ -107,6 +114,7 @@ extension PageContentView : UICollectionViewDataSource{
         return cell
     }
 }
+
 
 // MARK:-对外暴露的方法
 extension PageContentView{
