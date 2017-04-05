@@ -62,8 +62,10 @@ extension HomeViewController{
             
             // 创建对应的titleView
             let titleView = PageTitleView.init(frame: titleFrame, titles: titles)
-            
             titleView.backgroundColor = UIColor.red
+        
+            // 成为代理
+            titleView.delegate = self //因为在titleView中已经进行 ？ 处理了，所以这里不写 ？ 否则代理设置不成功
             
             return titleView
     }
@@ -114,5 +116,13 @@ extension HomeViewController{
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
+    }
+}
+
+// MARK:-遵循PageTitleViewDelegate
+extension HomeViewController : PageTitleViewDelegate {
+    
+    func pageTitleView(titleView: PageTitleView, selectIndex index: Int) {
+        print(index)
     }
 }

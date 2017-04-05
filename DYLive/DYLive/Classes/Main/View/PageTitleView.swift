@@ -11,6 +11,13 @@ import UIKit
 
 private let kScrollLineH : CGFloat = 2
 
+protocol PageTitleViewDelegate : class {
+    
+    // 这里只是方法的定义 --selectIndex index :分别是内部和外部属性
+    func pageTitleView(titleView : PageTitleView , selectIndex index : Int)
+    
+}
+
 
 class PageTitleView: UIView {
     
@@ -20,13 +27,15 @@ class PageTitleView: UIView {
     // 2. 封装PageContentView --> uicollectionView->横向滚动的cell
     // 3. 处理PageTitleView和PageContentView的逻辑
     
-    
+    // MARK:-自定义属性
     // MARK:-自定义的titles数组
     fileprivate var titles : [String]
     fileprivate var titleLabels : [UILabel] = [UILabel]()
     fileprivate var currentIndex : Int = 0 // 设置默认的当前下标为0
+    weak var delegate : PageTitleViewDelegate?
     
     
+    // MARK:-懒加载属性
     // MARK:-添加子控件scrollview 
     // scrollView 如果别的地方也用到的话，就慵懒加载比较好
     fileprivate lazy var scrollView : UIScrollView = {[weak self] in
@@ -45,7 +54,7 @@ class PageTitleView: UIView {
         scrollLine.backgroundColor = UIColor.orange
         
         return scrollLine
-        }();
+    }();
     
     
     // MARK:-自定制PageTitleView的构造方法
@@ -175,6 +184,9 @@ extension PageTitleView{
         UIView.animate(withDuration: 0.15) { 
             self.scrollLine.frame.origin.x = scrollLinePosition
         }
+        
+        // 6.通知代理做事情
+        delegate?.pageTitleView(titleView: self, selectIndex: currentIndex)
         
     }
     
