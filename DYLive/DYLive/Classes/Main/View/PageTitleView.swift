@@ -24,6 +24,7 @@ class PageTitleView: UIView {
     // MARK:-自定义的titles数组
     fileprivate var titles : [String]
     fileprivate var titleLabels : [UILabel] = [UILabel]()
+    fileprivate var currentIndex : Int = 0 // 设置默认的当前下标为0
     
     
     // MARK:-添加子控件scrollview 
@@ -37,6 +38,14 @@ class PageTitleView: UIView {
         
         return scrollView
     }();
+    
+    fileprivate lazy var scrollLine : UIView = {[weak self] in
+        
+        let scrollLine = UIView()
+        scrollLine.backgroundColor = UIColor.orange
+        
+        return scrollLine
+        }();
     
     
     // MARK:-自定制PageTitleView的构造方法
@@ -113,6 +122,11 @@ extension PageTitleView{
             // 5.添加到Label的数组中
             titleLabels.append(label)
             
+            // 6.给Label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
+            
         }
         
     }
@@ -126,18 +140,42 @@ extension PageTitleView{
         addSubview(bottomLine)
         
         guard let label = titleLabels.first else {return}
-        
         label.textColor = UIColor.orange
-        let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
         scrollLine.frame = CGRect(x: label.bounds.origin.x, y: label.frame.origin.y+label.frame.height, width: label.frame.width, height: kScrollLineH)
         addSubview(scrollLine)
         
         
-        
-        
-        
-        
-    
+
     }
+}
+
+// MARK:-监听Label的点击 -- 必须使用@objc
+extension PageTitleView{
+    
+    @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer){
+        
+        // 1.取到当前的label
+        guard let currentLabel = tapGes.view as? UILabel else {
+            return
+        }
+        
+        // 2.获取之前的label
+        let oldLabel = titleLabels[currentIndex]
+        
+        
+        // 3.设置文字颜色改变
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.black
+
+        // 4.保存新的当前下边值
+        currentIndex = currentLabel.tag
+        
+        // 5.滚动条的滚动
+        let scrollLinePosition : CGFloat =  currentLabel.frame.origin.x
+        UIView.animate(withDuration: 0.15) { 
+            self.scrollLine.frame.origin.x = scrollLinePosition
+        }
+        
+    }
+    
 }
