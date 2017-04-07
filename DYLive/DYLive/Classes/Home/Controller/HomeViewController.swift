@@ -43,7 +43,10 @@ class HomeViewController: UIViewController {
         // 2.创建对应的contentView
         var contentVcs = [UIViewController]()
         
-        for index in 0..<4 {
+        // 2.1 第一个是推荐
+        contentVcs.append(RecommendViewController())
+        
+        for index in 0..<3 {
             
             let childVc = UIViewController()
             

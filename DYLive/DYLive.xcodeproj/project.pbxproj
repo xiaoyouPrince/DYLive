@@ -39,6 +39,7 @@
 		B4DD79071E92A44000F36F8A /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79061E92A44000F36F8A /* Commons.swift */; };
 		B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79081E93A35E00F36F8A /* PageContentView.swift */; };
 		B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */; };
+		B4E3DA721E97E8F5000078EC /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		B4DD79061E92A44000F36F8A /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		B4DD79081E93A35E00F36F8A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				B404388C1E8D04EE00756453 /* Home.storyboard */,
 				B422A5B01E8E2C6B00788BF4 /* HomeViewController.swift */,
+				B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			files = (
 				B48C4CAB1E8CEC28002CD3AF /* AppDelegate.swift in Sources */,
 				B40438A31E8D0F0800756453 /* MainViewController.swift in Sources */,
+				B4E3DA721E97E8F5000078EC /* RecommendViewController.swift in Sources */,
 				B469DC1E1E9002D100B47BF4 /* PageTitleView.swift in Sources */,
 				B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */,
 				B469DC1C1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift in Sources */,
