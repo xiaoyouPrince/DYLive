@@ -38,6 +38,8 @@
 		B49D71061E8CF34700B73176 /* Default960.png in Resources */ = {isa = PBXBuildFile; fileRef = B49D70F81E8CF34700B73176 /* Default960.png */; };
 		B4BCB0571E993D9800DD4B36 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCB0551E993D9800DD4B36 /* CollectionHeaderView.swift */; };
 		B4BCB0581E993D9800DD4B36 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BCB0561E993D9800DD4B36 /* CollectionHeaderView.xib */; };
+		B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCB0591E99419F00DD4B36 /* CollectionNormalCell.swift */; };
+		B4BCB05C1E99419F00DD4B36 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */; };
 		B4DD79071E92A44000F36F8A /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79061E92A44000F36F8A /* Commons.swift */; };
 		B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79081E93A35E00F36F8A /* PageContentView.swift */; };
 		B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */; };
@@ -99,6 +101,8 @@
 		B49D70F81E8CF34700B73176 /* Default960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default960.png; sourceTree = "<group>"; };
 		B4BCB0551E993D9800DD4B36 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		B4BCB0561E993D9800DD4B36 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		B4BCB0591E99419F00DD4B36 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		B4DD79061E92A44000F36F8A /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		B4DD79081E93A35E00F36F8A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				B469DC1D1E9002D100B47BF4 /* PageTitleView.swift */,
 				B4DD79081E93A35E00F36F8A /* PageContentView.swift */,
+				B4BCB0591E99419F00DD4B36 /* CollectionNormalCell.swift */,
+				B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				B49D70FD1E8CF34700B73176 /* AppIcon40x40@2x.png in Resources */,
 				B404389F1E8D061700756453 /* Mine.storyboard in Resources */,
 				B49D71001E8CF34700B73176 /* AppIcon60x60@2x.png in Resources */,
+				B4BCB05C1E99419F00DD4B36 /* CollectionNormalCell.xib in Resources */,
 				B49D70F91E8CF34700B73176 /* AppIcon20x20@2x.png in Resources */,
 				B49D70FC1E8CF34700B73176 /* AppIcon29x29@2x.png in Resources */,
 				B404389D1E8D060800756453 /* Discovery.storyboard in Resources */,
@@ -520,6 +527,7 @@
 				B469DC1C1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift in Sources */,
 				B4DD79071E92A44000F36F8A /* Commons.swift in Sources */,
 				B422A5B11E8E2C6B00788BF4 /* HomeViewController.swift in Sources */,
+				B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */,
 				B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

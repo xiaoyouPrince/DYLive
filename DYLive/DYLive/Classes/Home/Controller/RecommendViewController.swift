@@ -34,13 +34,13 @@ class RecommendViewController: UIViewController {
         let collectionViewY : CGFloat = kStatusBarH + kNavBarH + kTabbarH
         let frame = CGRect(x: 0, y:0 , width: kScreenW, height: kScreenH - collectionViewY - kTabbarH)
         let collectionView = UICollectionView(frame: frame, collectionViewLayout:layout )
-        collectionView.backgroundColor = UIColor.red
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         
         // 注册normal类型的cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         // 注册组头
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader , withReuseIdentifier: kHeaderViewID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
 
     
         return collectionView
@@ -51,6 +51,11 @@ class RecommendViewController: UIViewController {
 
         // 创建UI
         creatUI()
+        
+        
+        
+
+        
         
         
     }
@@ -90,16 +95,13 @@ extension RecommendViewController : UICollectionViewDataSource{
         
         let cell : UICollectionViewCell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
         
-        cell.backgroundColor = UIColor.green
-        
+         
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header : UICollectionReusableView = collectionView .dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        
-        header.backgroundColor = UIColor.blue
         
         return header
         
