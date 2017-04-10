@@ -16,6 +16,8 @@
 		B422A5B11E8E2C6B00788BF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422A5B01E8E2C6B00788BF4 /* HomeViewController.swift */; };
 		B469DC1C1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B469DC1B1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift */; };
 		B469DC1E1E9002D100B47BF4 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B469DC1D1E9002D100B47BF4 /* PageTitleView.swift */; };
+		B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8A591E9B2DD60006F5E5 /* CollectionPrettyCell.swift */; };
+		B46E8A5C1E9B2DD60006F5E5 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */; };
 		B48C4CAB1E8CEC28002CD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */; };
 		B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */; };
 		B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CB11E8CEC28002CD3AF /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		B422A5B01E8E2C6B00788BF4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B469DC1B1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		B469DC1D1E9002D100B47BF4 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		B46E8A591E9B2DD60006F5E5 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		B48C4CA71E8CEC28002CD3AF /* DYLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48C4CAF1E8CEC28002CD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			children = (
 				B4BCB0551E993D9800DD4B36 /* CollectionHeaderView.swift */,
 				B4BCB0561E993D9800DD4B36 /* CollectionHeaderView.xib */,
+				B46E8A591E9B2DD60006F5E5 /* CollectionPrettyCell.swift */,
+				B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				B49D70FF1E8CF34700B73176 /* AppIcon57x57@2x.png in Resources */,
 				B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */,
 				B49D70FA1E8CF34700B73176 /* AppIcon20x20@3x.png in Resources */,
+				B46E8A5C1E9B2DD60006F5E5 /* CollectionPrettyCell.xib in Resources */,
 				B49D70FB1E8CF34700B73176 /* AppIcon29x29.png in Resources */,
 				B404389A1E8D05EC00756453 /* Fous.storyboard in Resources */,
 			);
@@ -527,6 +534,7 @@
 				B469DC1C1E8FF35A00B47BF4 /* UIBarButtonItem-Extension.swift in Sources */,
 				B4DD79071E92A44000F36F8A /* Commons.swift in Sources */,
 				B422A5B11E8E2C6B00788BF4 /* HomeViewController.swift in Sources */,
+				B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */,
 				B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */,
 				B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */,
 			);

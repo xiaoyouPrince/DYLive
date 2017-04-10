@@ -13,9 +13,11 @@ import UIKit
 // MARK: - 定义常量
 private let kItemMargin : CGFloat = 10
 private let kItemWidth : CGFloat = (kScreenW - 3 * kItemMargin) / 2
-private let kItemHeight : CGFloat = kItemWidth * 3 / 4
+private let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
+private let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
 
 private let kNormalCellID = "kNormalCellID"
+private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 
@@ -28,7 +30,7 @@ class RecommendViewController: UIViewController {
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout.minimumInteritemSpacing = kItemMargin
-        layout.itemSize = CGSize(width: kItemWidth, height: kItemHeight)
+        layout.itemSize = CGSize(width: kItemWidth, height: kNormalItemHeight)
         layout.headerReferenceSize = CGSize(width: kScreenW, height: 50)
         
         let collectionViewY : CGFloat = kStatusBarH + kNavBarH + kTabbarH
@@ -36,9 +38,11 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: frame, collectionViewLayout:layout )
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         // 注册normal类型的cell
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         // 注册组头
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
 
@@ -74,8 +78,9 @@ extension RecommendViewController{
 }
 
 
-// MARK: - 遵守collectionView的数据源
-extension RecommendViewController : UICollectionViewDataSource{
+// MARK: - 遵守collectionView的数据源 
+// UICollectionViewDelegateFlowLayout --继承自 UICollectionViewDelegate 用这个更加方便
+extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
@@ -93,9 +98,19 @@ extension RecommendViewController : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell : UICollectionViewCell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        // 定义cell
+        var cell : UICollectionViewCell!
         
-         
+        // 判断位置
+        if indexPath.section == 1 {
+            
+            cell = collectionView .dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            
+        }else
+        {
+            cell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        }
+        
         return cell
         
     }
@@ -106,9 +121,18 @@ extension RecommendViewController : UICollectionViewDataSource{
         return header
         
     }
+    
+    // 返回不同组cell的高度
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        
+        if indexPath.section == 1 {
+            return CGSize(width: kItemWidth, height: kPrettyItemHeight)
+        }else
+        {
+            return CGSize(width: kItemWidth, height: kNormalItemHeight)
+
+        }
+    }
 }
 
-// MARK: - 遵守collectionView的协议
-extension RecommendViewController : UICollectionViewDelegate{
-    
-}
+
