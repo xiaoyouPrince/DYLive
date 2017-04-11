@@ -57,7 +57,7 @@ class RecommendViewController: UIViewController {
         creatUI()
         
         
-        
+        loadData()
 
         
         
@@ -74,6 +74,29 @@ extension RecommendViewController{
         
         view.addSubview(collectionView)
     }
+    
+}
+
+
+// MARK: - 加载数据
+extension RecommendViewController{
+    
+    fileprivate func loadData(){
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://httpbin.org/get") { (result) in
+            
+            print(result)
+            
+        }
+        
+        
+        NetworkTools.requestData(type: .POST, URLString: "http://httpbin.org/post", parameters: ["name":"qxy"]) { (result) in
+            print(result)
+        }
+        
+    }
+    
+    
     
 }
 
