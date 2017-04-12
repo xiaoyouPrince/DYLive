@@ -37,8 +37,28 @@ class NetworkTools {
             finishCallBack(result as AnyObject)
             
         }
+    }
+    
+    
+    // get请求
+    class func getData(URLString : String , finishCallBack:@escaping (_ response : AnyObject) -> ()) {
         
+        // 调用类方法
+        requestData(type: .GET, URLString: URLString) { (response) in
+            
+            finishCallBack(response)
+        }
         
+    }
+    
+    
+    /// post请求
+    // MARK: - post请求
+    class func postData(URLString : String , parameters : [String : NSString]? = nil, finishCallBack:@escaping (_ response : AnyObject) -> ()) {
+        
+        requestData(type:.POST, URLString: URLString, parameters: parameters) { (response) in
+            finishCallBack(response)
+        }
     }
 
 }
