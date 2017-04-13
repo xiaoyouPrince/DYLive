@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+// MARK: - 测试地址
+let kGetUrl : String = "http://httpbin.org/get"
+let kPostUrl : String = "http://httpbin.org/post"
+
+
 // MARK:-一些常量
 
 let kStatusBarH : CGFloat = 20
