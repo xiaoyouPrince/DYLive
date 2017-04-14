@@ -83,7 +83,21 @@ extension RecommendViewController{
     
     fileprivate func loadData(){
         
-
+        // 加载一下数据
+        NetworkTools.getData(URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom") { (result) in
+            
+        }
+        
+        let date = NSDate()
+        let interval = date.timeIntervalSince1970
+        
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time": "\(interval)" as NSString]) { (result) in
+            
+            // 处理对应的result
+            
+            print(result)
+        }
         
     }   
 }
