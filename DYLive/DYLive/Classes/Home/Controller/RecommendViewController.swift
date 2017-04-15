@@ -88,11 +88,7 @@ extension RecommendViewController{
             
         }
         
-        let date = NSDate()
-        let interval = date.timeIntervalSince1970
-        
-        
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time": "\(interval)" as NSString]) { (result) in
+        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time": NSDate.getCurrentTime() as NSString]) { (result) in
             
             // 处理对应的result
             
