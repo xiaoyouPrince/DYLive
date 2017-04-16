@@ -49,6 +49,7 @@
 		B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79081E93A35E00F36F8A /* PageContentView.swift */; };
 		B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */; };
 		B4E3DA721E97E8F5000078EC /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */; };
+		B4F07A3A1EA3C86D008073A1 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F07A391EA3C86D008073A1 /* AnchorGroup.swift */; };
 		B4F3EF521E9B82C600335AF3 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F3EF511E9B82C600335AF3 /* Commons.swift */; };
 		B4F3EF551E9B832100335AF3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F3EF541E9B832100335AF3 /* NetworkTools.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +124,7 @@
 		B4DD79081E93A35E00F36F8A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		B4F07A391EA3C86D008073A1 /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		B4F3EF511E9B82C600335AF3 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		B4F3EF541E9B832100335AF3 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		C1B1C29D5DF541515B4A4070 /* Pods-DYLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYLiveUITests/Pods-DYLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		B422A5A91E8E2BBF00788BF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4F07A391EA3C86D008073A1 /* AnchorGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				B422A5B11E8E2C6B00788BF4 /* HomeViewController.swift in Sources */,
 				B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */,
 				B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */,
+				B4F07A3A1EA3C86D008073A1 /* AnchorGroup.swift in Sources */,
 				B4F3EF551E9B832100335AF3 /* NetworkTools.swift in Sources */,
 				B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */,
 			);
