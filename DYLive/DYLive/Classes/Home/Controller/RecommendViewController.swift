@@ -23,6 +23,9 @@ private let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {
     
+    // MARK: - 懒加载RecommendViewModel
+    fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
+    
     // MARK: - 懒加载collectionView
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         
@@ -83,17 +86,9 @@ extension RecommendViewController{
     
     fileprivate func loadData(){
         
-        // 加载一下数据
-        NetworkTools.getData(URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom") { (result) in
-            
-        }
+        // 加载一下数据通过ViewModel
         
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time": NSDate.getCurrentTime() as NSString]) { (result) in
-            
-            // 处理对应的result
-            
-            print(result)
-        }
+        recommendVM.requestData()
         
     }   
 }
