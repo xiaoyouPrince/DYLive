@@ -88,7 +88,12 @@ extension RecommendViewController{
         
         // 加载一下数据通过ViewModel
         
-        recommendVM.requestData()
+        recommendVM.requestData{
+            
+            // 1.请求完数据，进行刷新
+            self.collectionView.reloadData()
+            
+        }
         
     }   
 }
@@ -99,17 +104,22 @@ extension RecommendViewController{
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return self.recommendVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 0 {
-            return 8
-        }else
-        {
-            return 4
-        }
+//        if section == 0 {
+//            return  9
+//        }else
+//        {
+//            return 4
+//        }
+        
+        let group = self.recommendVM.anchorGroups[section]
+        
+        return group.anchors.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

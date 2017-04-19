@@ -16,14 +16,14 @@ class AnchorGroup: NSObject {
     /// 该组中的对应的房间信息
     var room_list : [[String : NSObject]]? {
         
+        // 监听属性修改
         didSet{
-            
             // 判断
             guard let room_list = room_list else { return }
-            
             // 遍历
-            for dict in room_list {
-                print(dict)
+            for anchor in room_list {
+                
+                self.anchors.append(AnchorModel(dict: anchor))
             }
         }
     }
@@ -35,13 +35,13 @@ class AnchorGroup: NSObject {
     /// 游戏对应的图标
     var icon_url : String = ""
     
+    // MARK: - 懒加载anchor模型
+    lazy var anchors : [AnchorModel] = [AnchorModel]()
     
-    // MARK: - 构造函数
+    // 自定义初始化方法
     override init() {
         
     }
-    
-    // 自定义初始化方法
     init(dict : [String : NSObject]) {
         
         super.init()
@@ -51,9 +51,6 @@ class AnchorGroup: NSObject {
     
     // 挥空方法，防止报错
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-    
-    
-    
     
 
 }
