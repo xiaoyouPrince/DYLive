@@ -169,6 +169,9 @@ extension PageTitleView{
             return
         }
         
+        // 对当前的Index和当前Label的tag值进行对比，如果当前label就是选中的label就不变了，如果是跳到其他的Label就执行后面，修改对应的颜色
+        if currentLabel.tag == currentIndex { return }
+        
         // 2.获取之前的label
         let oldLabel = titleLabels[currentIndex]
         
