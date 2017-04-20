@@ -138,7 +138,7 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
         {
             var cell : CollectionNormalCell!
             cell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
-            
+            cell.anchor = anchor
             return cell
 
         }
