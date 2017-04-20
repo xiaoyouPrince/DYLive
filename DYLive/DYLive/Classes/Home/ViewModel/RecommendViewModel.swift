@@ -20,9 +20,7 @@ class RecommendViewModel { // 这里没有用到对应的NSObject特性就不继
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
-    
-//    fileprivate var dGroup = DispatchGroup()
-    
+        
 }
 
 
@@ -56,10 +54,10 @@ extension RecommendViewModel{
                 let anchor = AnchorModel(dict: dict)
                 
                 self.bigDataGroup.anchors.append(anchor)
-                
-                // 请求完成离开队列
-//            dGroup.leave()
             }
+            
+            // 请求完成离开队列
+            dGroup.leave()
         }
         
         // 2. 请求第2部分 颜值数据
@@ -81,9 +79,10 @@ extension RecommendViewModel{
                 let anchor = AnchorModel(dict: dict)
                 
                 self.prettyGroup.anchors.append(anchor)
-                // 请求完成离开队列
-//                dGroup.leave()
+
             }
+            // 请求完成离开队列
+            dGroup.leave()
         }
         
         
@@ -106,9 +105,10 @@ extension RecommendViewModel{
                 let group = AnchorGroup(dict: dict)
                 self.anchorGroups.append(group)
                 
-                // 请求完成离开队列
-//                dGroup.leave()
             }
+            
+            // 请求完成离开队列
+            dGroup.leave()
 
         }
         
@@ -120,7 +120,11 @@ extension RecommendViewModel{
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             
-           finishCallBcak()
+            
+            print(self.anchorGroups)
+            
+            
+            finishCallBcak()
             
         }
 

@@ -1,6 +1,0 @@
-framework module Pods_DYLiveTests {
-  umbrella header "Pods-DYLiveTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
