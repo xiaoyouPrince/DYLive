@@ -118,7 +118,7 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // 定义cell
-//        var cell : UICollectionViewCell!
+        var cell : CollectionBaseCell!
         // 取到model
         let group = recommendVM.anchorGroups[indexPath.section]
         let anchor = group.anchors[indexPath.row]
@@ -127,7 +127,7 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
         // 判断位置
         if indexPath.section == 1 {
             
-            var cell : CollectionPrettyCell!
+//            var cell : CollectionPrettyCell!
             
             cell = collectionView .dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
             cell.anchor = anchor
@@ -136,7 +136,7 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
             
         }else
         {
-            var cell : CollectionNormalCell!
+//            var cell : CollectionNormalCell!
             cell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
             cell.anchor = anchor
             return cell
