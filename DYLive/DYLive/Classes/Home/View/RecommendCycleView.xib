@@ -25,6 +25,7 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="jn3-B6-1Yf"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="UVb-uh-WgV"/>
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-Y4-ONX">
