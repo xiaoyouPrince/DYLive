@@ -16,6 +16,9 @@ private let kItemWidth : CGFloat = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
 private let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
 
+private let kCycleViewHeight : CGFloat = kScreenW * 3 / 8
+
+
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
@@ -25,7 +28,6 @@ class RecommendViewController: UIViewController {
     
     // MARK: - 懒加载RecommendViewModel
     fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
-    
     // MARK: - 懒加载collectionView
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         
@@ -52,6 +54,13 @@ class RecommendViewController: UIViewController {
     
         return collectionView
     }()
+    // MARK: - 懒加载cycleView
+    fileprivate lazy var cycleView : RecommendCycleView = {
+        
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewHeight, width: kScreenW, height: kCycleViewHeight)
+        return cycleView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +68,9 @@ class RecommendViewController: UIViewController {
         // 创建UI
         creatUI()
         
-        
+        // 加载数据
         loadData()
 
-        
-        
-        
     }
 
 
@@ -76,6 +82,9 @@ extension RecommendViewController{
     fileprivate func creatUI(){
         
         view.addSubview(collectionView)
+        
+        collectionView.addSubview(cycleView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewHeight, left: 0, bottom: 0, right: 0)
     }
     
 }

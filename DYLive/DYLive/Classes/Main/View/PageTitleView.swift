@@ -90,7 +90,7 @@ extension PageTitleView{
         // 1.添加对应的scrollview
         addSubview(scrollView)
         scrollView.frame = self.bounds
-        scrollView.backgroundColor = UIColor.yellow
+//        scrollView.backgroundColor = UIColor.yellow
         
         // 2.添加lable
         setupTitleLabels()

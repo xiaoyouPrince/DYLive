@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecommendCycleView" customModule="DYLive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="139"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zMd-nJ-TGY">
+                    <rect key="frame" x="0.0" y="0.0" width="427" height="139"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P9Z-eE-0YD">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="jn3-B6-1Yf"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-Y4-ONX">
+                    <rect key="frame" x="383" y="102" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.76276867367889623" green="0.75570632395606685" blue="0.76746906725888331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.96966561520000005" green="1" blue="0.49984446049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OSL-Y4-ONX" secondAttribute="bottom" id="BFN-im-9oX"/>
+                <constraint firstAttribute="bottom" secondItem="zMd-nJ-TGY" secondAttribute="bottom" id="EMk-IJ-auu"/>
+                <constraint firstAttribute="trailing" secondItem="OSL-Y4-ONX" secondAttribute="trailing" constant="5" id="Hxe-CX-7fb"/>
+                <constraint firstItem="zMd-nJ-TGY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MOJ-oX-X4r"/>
+                <constraint firstAttribute="trailing" secondItem="zMd-nJ-TGY" secondAttribute="trailing" id="NdY-qS-S3v"/>
+                <constraint firstItem="zMd-nJ-TGY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zGU-5b-keL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="zMd-nJ-TGY" id="8J5-gG-eXd"/>
+                <outlet property="pageControl" destination="OSL-Y4-ONX" id="HUx-Jx-p18"/>
+            </connections>
+            <point key="canvasLocation" x="-13" y="-232"/>
+        </view>
+    </objects>
+</document>

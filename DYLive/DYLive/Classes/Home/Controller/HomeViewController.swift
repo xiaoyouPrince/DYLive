@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         
         // 创建对应的titleView
         let titleView = PageTitleView.init(frame: titleFrame, titles: titles)
-        titleView.backgroundColor = UIColor.red
+//        titleView.backgroundColor = UIColor.red
         
         // 成为代理
         titleView.delegate = self  //因为在titleView中已经进行 ？ 处理了，所以这里不写 ？ 否则代理设置不成功
