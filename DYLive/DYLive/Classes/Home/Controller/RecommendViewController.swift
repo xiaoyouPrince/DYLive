@@ -95,13 +95,18 @@ extension RecommendViewController{
     
     fileprivate func loadData(){
         
-        // 加载一下数据通过ViewModel
-        
+        // MARK: - 请求推荐数据
         recommendVM.requestData{
             
             // 1.请求完数据，进行刷新
             self.collectionView.reloadData()
             
+        }
+        
+        // MARK: - 请求轮播数据
+        recommendVM.requestCycleData { 
+            // 请求完成，刷新数据
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
         
     }   

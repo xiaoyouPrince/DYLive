@@ -12,10 +12,24 @@ let cycleCellID : String = "cycleCellID"
 
 
 class RecommendCycleView: UIView {
+    
+    // MARK: - 模型数据行
+    var cycleModels : [CycleModel]?{
+        didSet{
+            
+            // 1.刷新自己的collectionView
+            self.collectionView.reloadData()
+            
+            // 2.设置pageControl的页码
+            self.pageControl.numberOfPages = self.cycleModels?.count ?? 0
+        }
+    }
+    
 
     // MARK: - 设置内部空间
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
     
     
     // MARK: - 系统回调
@@ -74,16 +88,17 @@ extension RecommendCycleView{
 // MARK: - 内容的数据源方法
 extension RecommendCycleView : UICollectionViewDataSource{
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        
+        // 这里的 self.cycleModels? 是可选类型，返回的值也是可选类型，所以当返回值为空的时候通过  ?? 语法转化为 0
+        return self.cycleModels?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cycleCellID, for: indexPath)
+        
+        let model = self.cycleModels![indexPath.item]
+        
         if indexPath.row % 2 == 0 {cell.backgroundColor = UIColor.red }else{cell.backgroundColor = UIColor.yellow}
         return cell
         

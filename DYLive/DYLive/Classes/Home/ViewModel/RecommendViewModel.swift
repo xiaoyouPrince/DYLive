@@ -20,13 +20,16 @@ class RecommendViewModel { // 这里没有用到对应的NSObject特性就不继
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
-        
+    
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
+    
 }
 
 
 // MARK: - 请求推荐页面数据
 extension RecommendViewModel{
     
+    // MARK: - 请求推荐数据
     func requestData(_ finishCallBcak : @escaping() -> ()) {
         
         // 0.封装请求参数
@@ -128,6 +131,27 @@ extension RecommendViewModel{
             
         }
 
+    }
+    
+    // MARK: - 请求轮播数据
+    func requestCycleData(_ finishCallBcak : @escaping() -> ()) {
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            
+            // 1.获取整体字典数据
+            guard let resultDict = result as? [String : NSObject] else{ return }
+            
+            // 2.根据对应的data的key获取数据
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else{ return }
+            
+            // 3.字典转模型
+            for dict in dataArray{
+                
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
+            
+            finishCallBcak() //请求完成的回调  
+        }
     }
     
 }
