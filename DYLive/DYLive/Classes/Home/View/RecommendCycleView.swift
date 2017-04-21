@@ -131,6 +131,17 @@ extension RecommendCycleView : UICollectionViewDelegate{
         self.pageControl.currentPage = Int(offsetX / scrollView.bounds.size.width) % (cycleModels?.count ?? 1) //防止pageControl不滚动
     }
     
+    // MARK: - 用户手动拖拽和停止拖拽
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        removeTimer()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        addCycleTimer()
+    }
+    
 }
 
 
