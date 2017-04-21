@@ -28,13 +28,13 @@
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-Y4-ONX">
-                    <rect key="frame" x="383" y="102" width="39" height="37"/>
+                    <rect key="frame" x="383" y="105" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" red="0.76276867367889623" green="0.75570632395606685" blue="0.76746906725888331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="currentPageIndicatorTintColor" red="0.96966561520000005" green="1" blue="0.49984446049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="OSL-Y4-ONX" secondAttribute="bottom" id="BFN-im-9oX"/>
+                <constraint firstAttribute="bottom" secondItem="OSL-Y4-ONX" secondAttribute="bottom" constant="-3" id="BFN-im-9oX"/>
                 <constraint firstAttribute="bottom" secondItem="zMd-nJ-TGY" secondAttribute="bottom" id="EMk-IJ-auu"/>
                 <constraint firstAttribute="trailing" secondItem="OSL-Y4-ONX" secondAttribute="trailing" constant="5" id="Hxe-CX-7fb"/>
                 <constraint firstItem="zMd-nJ-TGY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MOJ-oX-X4r"/>

@@ -69,7 +69,7 @@ extension RecommendCycleView{
         collectionView.showsHorizontalScrollIndicator = false
         
         // MARK: - 注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cycleCellID)
+        collectionView.register(UINib.init(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: cycleCellID)
     }
     
 }
@@ -95,13 +95,27 @@ extension RecommendCycleView : UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cycleCellID, for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cycleCellID, for: indexPath) as! CollectionCycleCell
         
         let model = self.cycleModels![indexPath.item]
+        cell.cycleModel = model
         
         if indexPath.row % 2 == 0 {cell.backgroundColor = UIColor.red }else{cell.backgroundColor = UIColor.yellow}
         return cell
         
+    }
+    
+}
+
+// MARK: - 内容的代理方法
+extension RecommendCycleView : UICollectionViewDelegate{
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.size.width * 0.5
+        
+        self.pageControl.currentPage = Int(offsetX / scrollView.bounds.size.width)
     }
     
 }
