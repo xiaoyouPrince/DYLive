@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYLive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-bs-P5k">
+                        <rect key="frame" x="0.0" y="70" width="80" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="ZFD-nO-TOZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="ujv-pb-w9G">
+                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ujv-pb-w9G" secondAttribute="height" multiplier="1:1" id="L59-Mk-tob"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kLY-bs-P5k" secondAttribute="bottom" constant="5" id="0XM-6m-1W1"/>
+                <constraint firstItem="ujv-pb-w9G" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="6qb-E6-ftF"/>
+                <constraint firstItem="kLY-bs-P5k" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DY5-l4-hf5"/>
+                <constraint firstItem="ujv-pb-w9G" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="TTb-iA-bB2"/>
+                <constraint firstAttribute="trailing" secondItem="kLY-bs-P5k" secondAttribute="trailing" id="ed5-f3-PQe"/>
+                <constraint firstAttribute="trailing" secondItem="ujv-pb-w9G" secondAttribute="trailing" constant="15" id="re0-do-Pme"/>
+            </constraints>
+            <size key="customSize" width="189" height="126"/>
+            <connections>
+                <outlet property="iconImageView" destination="ujv-pb-w9G" id="fBa-wc-ogZ"/>
+                <outlet property="nameLable" destination="kLY-bs-P5k" id="721-Ym-VfY"/>
+            </connections>
+            <point key="canvasLocation" x="-69" y="125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>

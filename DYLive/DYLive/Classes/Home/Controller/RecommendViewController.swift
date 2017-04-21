@@ -17,6 +17,7 @@ private let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
 private let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
 
 private let kCycleViewHeight : CGFloat = kScreenW * 3 / 8
+private let kGameViewHeight : CGFloat = 90
 
 
 private let kNormalCellID = "kNormalCellID"
@@ -58,8 +59,15 @@ class RecommendViewController: UIViewController {
     fileprivate lazy var cycleView : RecommendCycleView = {
         
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewHeight, width: kScreenW, height: kCycleViewHeight)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewHeight + kGameViewHeight), width: kScreenW, height: kCycleViewHeight)
         return cycleView
+    }()
+    // MARK: - 懒加载游戏gameView
+    fileprivate lazy var gameView : RecommendGameView = {
+        
+        let gameView = RecommendGameView.creatGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewHeight, width: kScreenW, height: kGameViewHeight)
+        return gameView
     }()
 
     override func viewDidLoad() {
@@ -84,7 +92,8 @@ extension RecommendViewController{
         view.addSubview(collectionView)
         
         collectionView.addSubview(cycleView)
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewHeight, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewHeight + kGameViewHeight, left: 0, bottom: 0, right: 0)
     }
     
 }
@@ -100,6 +109,9 @@ extension RecommendViewController{
             
             // 1.请求完数据，进行刷新
             self.collectionView.reloadData()
+            
+            // 2.刷新gameView的数据
+            self.gameView.groups = self.recommendVM.anchorGroups
             
         }
         
