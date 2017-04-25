@@ -24,8 +24,10 @@ class CollectionGameCell: UICollectionViewCell {
             // 组昵称
             nameLable.text = gameModel?.tag_name
             // 组图标
+            // 这块需要可选绑定一下，防止崩溃
             let iconUrl = URL(string: gameModel?.icon_url ?? "")
             iconImageView.kf.setImage(with: iconUrl, placeholder: UIImage(named:"home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+            
             
         }
     }
