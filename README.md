@@ -14,5 +14,6 @@
 4. 完善无限轮播功能，修改对应的数据源方法，造成对应的假象，添加定时器和手势来完善无限轮播功能
 5. 完善推荐页面的GameView的UI展示
 
+
 【当前效果】：<br>
 ![4.21当前效果图.gif](http://upload-images.jianshu.io/upload_images/1256297-650d1915687dc155.gif?imageMogr2/auto-orient/strip)
