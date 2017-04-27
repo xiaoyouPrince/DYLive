@@ -16,4 +16,4 @@
 
 
 【当前效果】：<br>
-![4.21当前效果图.gif](http://upload-images.jianshu.io/upload_images/1256297-650d1915687dc155.gif?imageMogr2/auto-orient/strip)
+![4.21当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/default.gif)
