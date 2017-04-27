@@ -45,8 +45,9 @@ class HomeViewController: UIViewController {
         
         // 2.1 第一个是推荐
         contentVcs.append(RecommendViewController())
+        contentVcs.append(GameViewController())
         
-        for index in 0..<3 {
+        for index in 0..<2 {
             
             let childVc = UIViewController()
             
