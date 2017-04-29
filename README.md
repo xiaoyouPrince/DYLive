@@ -17,3 +17,8 @@
 
 【当前效果】：<br>
 ![4.21当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/default.gif)
+
+
+**2017年04月29日 —** <br><br>
+【目标】<br>
+完成游戏页面
