@@ -16,7 +16,7 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var nameLable: UILabel!
     
     // MARK: - 设置数据
-    var gameModel : AnchorGroup? {
+    var gameModel : GameBaceModel? {
         didSet{
             
             guard gameModel != nil else { return }
