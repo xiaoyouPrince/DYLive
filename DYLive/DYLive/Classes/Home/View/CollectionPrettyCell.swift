@@ -21,6 +21,14 @@ class CollectionPrettyCell: CollectionBaseCell {
         // 监听赋值model
         didSet{
             
+            if anchor?.anchor_city == "" {
+                
+                anchor?.anchor_city = "定州市"
+                
+            }  else {
+                return
+            }
+            
             super.anchor = anchor
             
             // 4.设置城市

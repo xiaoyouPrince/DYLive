@@ -15,13 +15,14 @@ private let kItemMargin : CGFloat = 10
 private let kCycleViewHeight : CGFloat = kScreenW * 3 / 8
 private let kGameViewHeight : CGFloat = 90
 
-let kNormalCellID = "kNormalCellID"
-let kPrettyCellID = "kPrettyCellID"
-let kHeaderViewID = "kHeaderViewID"
+private let kNormalCellID = "kNormalCellID"
+private let kHeaderViewID = "kHeaderViewID"
 
 let kItemWidth : CGFloat = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
 let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
+let kPrettyCellID = "kPrettyCellID"
+
 
 class BaceAnchorViewController: UIViewController {
     

@@ -8,15 +8,29 @@
 
 import UIKit
 
+private let kMenuViewH : CGFloat = 200
+
 class AmuseViewController: BaceAnchorViewController {
     
     // MARK: - 懒加载
     fileprivate lazy var amuseVM : AmuseViewModel = AmuseViewModel()
+    fileprivate lazy var menuView : AmuseMenuView = {
+    
+        let menuView = AmuseMenuView.creatMenuView()
+        
+        menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenW, height: kMenuViewH)
+        
+        return menuView
+        
+    }()
 }
 
 extension AmuseViewController{
     override func buildUI() {
         super.buildUI()
+        
+        collectionView.addSubview(menuView)
+        collectionView.contentInset = UIEdgeInsets(top: kMenuViewH, left: 0, bottom: 0, right: 0)
         
     }
 }

@@ -11,8 +11,6 @@ import UIKit
 
 
 // MARK: - 定义常量
-
-
 private let kCycleViewHeight : CGFloat = kScreenW * 3 / 8
 private let kGameViewHeight : CGFloat = 90
 
@@ -38,30 +36,20 @@ class RecommendViewController: BaceAnchorViewController {
         return gameView
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // 创建UI
-        creatUI()
-        
-        // 加载数据
-        loadData()
-
-    }
-
-
 }
 
 // MARK: - 创建UI页面
 extension RecommendViewController{
     
-    fileprivate func creatUI(){
+
+    override func buildUI() {
         
-        view.addSubview(collectionView)
+        super.buildUI()
         
         collectionView.addSubview(cycleView)
         collectionView.addSubview(gameView)
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewHeight + kGameViewHeight, left: 0, bottom: 0, right: 0)
+
     }
     
 }
@@ -108,11 +96,15 @@ extension RecommendViewController : UICollectionViewDelegateFlowLayout{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // 重写当第一组的话是prettyCell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+        if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+            
+            cell.anchor = self.recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+            
+            return cell
+        }
         
-        cell.anchor = self.recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
-        
-        return cell
+        return super.collectionView(collectionView, cellForItemAt: indexPath)
         
     }
     

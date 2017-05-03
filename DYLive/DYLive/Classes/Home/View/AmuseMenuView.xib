@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AmuseMenuView" customModule="DYLive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DZp-ol-IuH">
+                    <rect key="frame" x="168" y="168" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.82314800129999999" green="0.82314800129999999" blue="0.82314800129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.3880681111" green="0.94846526019999999" blue="0.47278559440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="km2-wB-OUB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yav-E2-Oau">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DZp-ol-IuH" firstAttribute="top" secondItem="km2-wB-OUB" secondAttribute="bottom" constant="-5" id="9Lc-nc-JCI"/>
+                <constraint firstAttribute="trailing" secondItem="km2-wB-OUB" secondAttribute="trailing" id="HBw-r0-1Df"/>
+                <constraint firstItem="km2-wB-OUB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OnV-nU-Hek"/>
+                <constraint firstAttribute="bottom" secondItem="DZp-ol-IuH" secondAttribute="bottom" constant="-5" id="Y5H-pB-L9V"/>
+                <constraint firstItem="km2-wB-OUB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eIK-K8-Vya"/>
+                <constraint firstItem="DZp-ol-IuH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eyi-y2-HMm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="km2-wB-OUB" id="eF0-t8-sW8"/>
+                <outlet property="pageControl" destination="DZp-ol-IuH" id="4PY-A8-vRd"/>
+            </connections>
+        </view>
+    </objects>
+</document>

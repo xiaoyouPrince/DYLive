@@ -63,6 +63,8 @@
 		B4BCB0581E993D9800DD4B36 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BCB0561E993D9800DD4B36 /* CollectionHeaderView.xib */; };
 		B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BCB0591E99419F00DD4B36 /* CollectionNormalCell.swift */; };
 		B4BCB05C1E99419F00DD4B36 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */; };
+		B4C103F81EBA45040069EA6C /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C103F71EBA45040069EA6C /* AmuseMenuView.swift */; };
+		B4C103FA1EBA45140069EA6C /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C103F91EBA45140069EA6C /* AmuseMenuView.xib */; };
 		B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79081E93A35E00F36F8A /* PageContentView.swift */; };
 		B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */; };
 		B4E3DA721E97E8F5000078EC /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */; };
@@ -155,6 +157,8 @@
 		B4BCB0561E993D9800DD4B36 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		B4BCB0591E99419F00DD4B36 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		B4C103F71EBA45040069EA6C /* AmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
+		B4C103F91EBA45140069EA6C /* AmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		B4DD79081E93A35E00F36F8A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				B45EC66B1EA9F50600AA1BA4 /* RecommendGameView.xib */,
 				B45EC66D1EAA015F00AA1BA4 /* CollectionGameCell.swift */,
 				B45EC66E1EAA015F00AA1BA4 /* CollectionGameCell.xib */,
+				B4C103F71EBA45040069EA6C /* AmuseMenuView.swift */,
+				B4C103F91EBA45140069EA6C /* AmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				B45EC6701EAA015F00AA1BA4 /* CollectionGameCell.xib in Resources */,
 				B404389D1E8D060800756453 /* Discovery.storyboard in Resources */,
 				B49D71011E8CF34700B73176 /* AppIcon60x60@3x.png in Resources */,
+				B4C103FA1EBA45140069EA6C /* AmuseMenuView.xib in Resources */,
 				B49D70FF1E8CF34700B73176 /* AppIcon57x57@2x.png in Resources */,
 				B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */,
 				B49D70FA1E8CF34700B73176 /* AppIcon20x20@3x.png in Resources */,
@@ -734,6 +741,7 @@
 				B422A5B11E8E2C6B00788BF4 /* HomeViewController.swift in Sources */,
 				B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */,
 				B4383E251EA8BE5100D1D22B /* CollectionBaseCell.swift in Sources */,
+				B4C103F81EBA45040069EA6C /* AmuseMenuView.swift in Sources */,
 				B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */,
 				B45EC66F1EAA015F00AA1BA4 /* CollectionGameCell.swift in Sources */,
 				B4F07A3A1EA3C86D008073A1 /* AnchorGroup.swift in Sources */,
