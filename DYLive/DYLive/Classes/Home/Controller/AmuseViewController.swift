@@ -24,7 +24,9 @@ private let kHeaderViewID = "kHeaderViewID"
 
 class AmuseViewController: UIViewController {
     
-    // MARK: - 懒加载collectionView
+    
+    // MARK: - 懒加载
+    fileprivate lazy var amuseVM : AmuseViewModel = AmuseViewModel()
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         
         var layout = UICollectionViewFlowLayout()
@@ -56,6 +58,8 @@ class AmuseViewController: UIViewController {
         super.viewDidLoad()
         
         buildUI()
+        
+        loadData()
     }
 
 }
@@ -69,17 +73,29 @@ extension AmuseViewController{
     }
 }
 
+extension AmuseViewController{
+    
+    func loadData() {
+        
+        self.amuseVM.loadAmuseData {
+            self.collectionView.reloadData()
+        }
+        
+    }
+}
+
 extension AmuseViewController : UICollectionViewDataSource , UICollectionViewDelegateFlowLayout
 {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return self.amuseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        let anchorGroup = self.amuseVM.anchorGroups[section]
         
-        return 10
+        return (anchorGroup.anchors.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -87,33 +103,36 @@ extension AmuseViewController : UICollectionViewDataSource , UICollectionViewDel
         // 定义cell
         var cell : CollectionBaseCell!
         cell = collectionView .dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
-        cell.backgroundColor = UIColor.randomColor()
+        
+        let anchorGroup = self.amuseVM.anchorGroups[indexPath.section]
+        
+        cell.anchor = anchorGroup.anchors[indexPath.item]
         return cell
 
         
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        
-//        // 1.创建header
-//        let header : CollectionHeaderView = collectionView .dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
-//        
-//        // 2.给header赋值
-//        header.group = recommendVM.anchorGroups[indexPath.section]
-//        
-//        return header
-//        
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        // 1.创建header
+        let header : CollectionHeaderView = collectionView .dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        
+        // 2.给header赋值
+        header.group = self.amuseVM.anchorGroups[indexPath.section]
+        
+        return header
+        
+    }
     
     // 返回不同组cell的高度
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
-        if indexPath.section == 1 {
-            return CGSize(width: kItemWidth, height: kPrettyItemHeight)
-        }else
-        {
+//        if indexPath.section == 1 {
+//            return CGSize(width: kItemWidth, height: kPrettyItemHeight)
+//        }else
+//        {
             return CGSize(width: kItemWidth, height: kNormalItemHeight)
             
-        }
+//        }
     }
 }
