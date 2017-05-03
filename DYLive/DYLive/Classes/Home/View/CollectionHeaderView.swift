@@ -26,3 +26,16 @@ class CollectionHeaderView: UICollectionReusableView {
     }
     
 }
+
+
+extension CollectionHeaderView
+{
+    class func creatHeaderView() -> CollectionHeaderView {
+        
+        let headerView = Bundle.main.loadNibNamed("CollectionHeaderView", owner: nil, options: nil)?.first as! CollectionHeaderView
+        
+        return headerView
+        
+    }
+}
+

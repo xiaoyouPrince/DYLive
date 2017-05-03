@@ -19,19 +19,8 @@ class RecommendGameView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - 属性
-    var groups : [AnchorGroup]? {
+    var groups : [GameBaceModel]? {
         didSet{
-            
-            // 验证
-            guard groups != nil else { return }
-            
-            // 去除前两组--添加最后一组更多
-            groups?.remove(at: 0)
-            groups?.remove(at: 0)
-            
-            let group = AnchorGroup()
-            group.tag_name = "more"
-            groups?.append(group)
             
             // 刷新自己数据
             self.collectionView.reloadData()

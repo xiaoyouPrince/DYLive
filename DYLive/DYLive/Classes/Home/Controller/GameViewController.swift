@@ -46,7 +46,24 @@ class GameViewController: UIViewController {
         return collectionView
         
     }()
+    fileprivate lazy var gameView : RecommendGameView = {
     
+        let gameView = RecommendGameView.creatGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+        
+    }()
+    fileprivate lazy var topHeaderView : CollectionHeaderView = {
+    
+        let topHeaderView = CollectionHeaderView.creatHeaderView()
+        topHeaderView.frame = CGRect(x: 0, y: -(kHeaderViewH + kGameViewH), width: kScreenW, height: kHeaderViewH)
+        
+        topHeaderView.iconImageView.image = UIImage(named: "Img_orange")
+        topHeaderView.nameLabel.text = "常见"
+        topHeaderView.moreBtn.isHidden = true
+        
+        return topHeaderView
+    }()
     
 
     override func viewDidLoad() {
@@ -68,7 +85,9 @@ extension GameViewController{
     fileprivate func creatUI(){
         
         view.addSubview(collectionView)
-        collectionView.contentInset = UIEdgeInsetsMake(kGameViewH + kHeaderViewH, 0, 0, 0)
+        collectionView.addSubview(topHeaderView)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsetsMake(kGameViewH + kHeaderViewH, 0, kGameViewH + kHeaderViewH, 0)
         
     }
     
@@ -82,6 +101,11 @@ extension GameViewController{
         self.gameVM.loadGameData {
             // 加载完数据，进行刷新
             self.collectionView.reloadData()
+            
+            // gameView进行页面刷新
+            // 外部处理数据
+            let games = Array(self.gameVM.games[0..<10])
+            self.gameView.groups = games
         }
         
     }

@@ -111,6 +111,15 @@ extension RecommendViewController{
             self.collectionView.reloadData()
             
             // 2.刷新gameView的数据
+            // 2.1 验证（外部传递的时候自己处理好数据）
+            // 去除前两组--添加最后一组更多
+            self.recommendVM.anchorGroups.remove(at: 0)
+            self.recommendVM.anchorGroups.remove(at: 0)
+            
+            let group = AnchorGroup()
+            group.tag_name = "more"
+            self.recommendVM.anchorGroups.append(group)
+        
             self.gameView.groups = self.recommendVM.anchorGroups
             
         }
