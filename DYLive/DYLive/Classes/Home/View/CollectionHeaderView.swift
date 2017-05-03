@@ -14,6 +14,7 @@ class CollectionHeaderView: UICollectionReusableView {
     // MARK: - 控件的属性
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     
     // MARK: - 自定义模型，并监听
     var group : AnchorGroup? {

@@ -36,9 +36,9 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-vh-hkn">
-                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-vh-hkn">
+                        <rect key="frame" x="0.0" y="89" width="80" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="YLd-GE-aSV"/>
                         </constraints>
@@ -46,7 +46,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="rJW-vh-hkn" secondAttribute="bottom" constant="-1" id="Dye-8d-sL7"/>
+                <constraint firstAttribute="bottom" secondItem="rJW-vh-hkn" secondAttribute="bottom" id="Dye-8d-sL7"/>
                 <constraint firstAttribute="trailing" secondItem="rJW-vh-hkn" secondAttribute="trailing" id="H4S-4y-ZqR"/>
                 <constraint firstItem="kLY-bs-P5k" firstAttribute="top" secondItem="ujv-pb-w9G" secondAttribute="bottom" constant="8" id="T8Y-Kv-dJc"/>
                 <constraint firstItem="ujv-pb-w9G" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="caE-GL-p3j"/>

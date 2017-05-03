@@ -66,7 +66,7 @@ class RecommendViewController: UIViewController {
     fileprivate lazy var gameView : RecommendGameView = {
         
         let gameView = RecommendGameView.creatGameView()
-        gameView.frame = CGRect(x: 0, y: -kGameViewHeight, width: kScreenW, height: kGameViewHeight)
+        gameView.frame = CGRect(x: 0, y: -kGameViewHeight, width: kScreenW, height: kGameViewHeight )
         return gameView
     }()
 

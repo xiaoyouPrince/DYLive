@@ -58,7 +58,7 @@ extension RecommendGameView{
     func buildUI() {
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 80, height: 90)
+        layout.itemSize = CGSize(width: 80, height: 90 + 2)//这里+2是隐藏推荐页面的gameView的下边底线
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -96,7 +96,6 @@ extension RecommendGameView : UICollectionViewDataSource
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCellID, for: indexPath) as!CollectionGameCell
         cell.gameModel = self.groups![indexPath.item]
-//        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.green
         return cell;
         
     }

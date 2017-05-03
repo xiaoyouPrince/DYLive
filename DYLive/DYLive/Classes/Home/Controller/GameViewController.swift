@@ -16,7 +16,7 @@ private let kHeaderViewH : CGFloat = 50
 private let kGameViewH : CGFloat = 90
 
 private let kGameCellID = "GameCellID"
-
+private let kHeaderViewID = "kHeaderViewID"
 
 
 class GameViewController: UIViewController {
@@ -32,14 +32,16 @@ class GameViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsetsMake(0, kEdgeMargin, 0, kEdgeMargin)
+        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         
         // 2.创建collectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
-        
+        collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
         return collectionView
         
@@ -49,14 +51,13 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+
         creatUI()
 
         loadData()
-        
-
     }
+    
 
 }
 
@@ -67,7 +68,6 @@ extension GameViewController{
     fileprivate func creatUI(){
         
         view.addSubview(collectionView)
-        collectionView.autoresizingMask = .init(rawValue: 0)
         collectionView.contentInset = UIEdgeInsetsMake(kGameViewH + kHeaderViewH, 0, 0, 0)
         
     }
@@ -107,5 +107,17 @@ extension GameViewController : UICollectionViewDataSource {
         
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        
+        header.iconImageView.image = UIImage(named: "Img_orange")
+        header.nameLabel.text = "全部"
+        header.moreBtn.isHidden = true
+        
+        return header
+         
     }
 }
