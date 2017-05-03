@@ -14,10 +14,9 @@
 
 import UIKit
 
-class RecommendViewModel { // 这里没有用到对应的NSObject特性就不继承了
-
+class RecommendViewModel : BaseViewModel {
+    
     // MARK: - 懒加载对应的Model
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
     
@@ -91,30 +90,33 @@ extension RecommendViewModel{
         
         // 3. 请求第3部分 游戏数据
         dGroup.enter()
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: params) { (result) in
-            
-            // 处理对应的result
-            print(result)
-            
-            // 1. 先将result转成字典
-            guard let resultDict = result as? [String : NSObject] else { return }
-            
-            // 2. 根据data的key取出数组
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-
-            // 3.遍历数组，获取字典，根据字典转化成model对象
-            for dict in dataArray{
-                
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-                
-            }
-            
+//        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: params) { (result) in
+//            
+//            // 处理对应的result
+//            print(result)
+//            
+//            // 1. 先将result转成字典
+//            guard let resultDict = result as? [String : NSObject] else { return }
+//            
+//            // 2. 根据data的key取出数组
+//            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
+//
+//            // 3.遍历数组，获取字典，根据字典转化成model对象
+//            for dict in dataArray{
+//                
+//                let group = AnchorGroup(dict: dict)
+//                self.anchorGroups.append(group)
+//                
+//            }
+//            
+//            // 请求完成离开队列
+//            dGroup.leave()
+//
+//        }
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: params) { 
             // 请求完成离开队列
             dGroup.leave()
-
         }
-        
         
         
         // 4.数据请求完成之后dispatch回调

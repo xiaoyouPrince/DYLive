@@ -19,7 +19,7 @@ enum RequestMethod  {
 class NetworkTools {
     
     // 自定义一个类方法
-    class func requestData(type:RequestMethod , URLString : String , parameters : [String : NSString]? = nil , finishCallBack:@escaping (_ response : AnyObject) -> ()){
+    class func requestData(type:RequestMethod , URLString : String , parameters : [String : Any]? = nil , finishCallBack:@escaping (_ response : AnyObject) -> ()){
         
         // 获取类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
