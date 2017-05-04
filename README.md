@@ -32,3 +32,19 @@
 
 【当前效果】：<br>
 ![4.29当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/4.29-DYLive.gif)
+
+
+**2017年05月03日 —** <br><br>
+【状态】：已经完成游戏页面的布局和数据展示<br>
+【计划】：完成娱乐页面的布局和数据展示<br>
+【实现步骤】：
+1. 创建娱乐页面控制器：AmuseViewController
+2. 布局页面中 collectionView，创建基本布局，基本和推荐页面相似可复用
+3. 请求和展示数据（主体部分数据）
+4. 娱乐 && 推荐页面，抽取重复代码。进行父类抽取
+5. 设计顶部的topView基本布局。创建并添加topView完成基本框架。
+6. 创建topView内部子控件，进行详细布局
+7. 娱乐页面-进行顶部数据展示
+
+【当前效果】：<br>
+![5.03当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/5.03-DYLive.gif)
