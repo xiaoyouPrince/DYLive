@@ -56,6 +56,7 @@
             </constraints>
             <size key="customSize" width="189" height="126"/>
             <connections>
+                <outlet property="bottomLine" destination="rJW-vh-hkn" id="0qM-cn-8SO"/>
                 <outlet property="iconImageView" destination="ujv-pb-w9G" id="fBa-wc-ogZ"/>
                 <outlet property="nameLable" destination="kLY-bs-P5k" id="721-Ym-VfY"/>
             </connections>

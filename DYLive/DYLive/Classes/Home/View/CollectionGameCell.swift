@@ -14,6 +14,7 @@ class CollectionGameCell: UICollectionViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var bottomLine: UIView!
     
     // MARK: - 设置数据
     var gameModel : GameBaceModel? {

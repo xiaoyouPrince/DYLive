@@ -40,8 +40,17 @@ extension AmuseViewController{
         // 1.给父类的数据赋值
         super.baceVM = amuseVM
         
+        // 2.请求数据
         self.amuseVM.loadAmuseData {
+            
+            // 2.1 刷新表格
             self.collectionView.reloadData()
+            
+            // 2.2 刷新上边的menuView
+            var tempGroups = self.amuseVM.anchorGroups
+            tempGroups.removeFirst()
+            self.menuView.groups = tempGroups
+            
         }
     }
 }
