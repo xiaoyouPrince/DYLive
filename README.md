@@ -48,3 +48,15 @@
 
 【当前效果】：<br>
 ![5.03当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/5.03-DYLive.gif)
+
+
+**2017年05月06日 —** <br><br>
+【状态】：已经完成娱乐页面的布局和数据展示<br>
+【计划】：完成趣玩页面的布局和数据展示<br>
+【实现步骤】：
+1. 创建趣玩页面控制器：FunnyViewController
+2. 页面基本布局为 collectionView，可复用之前抽取的BaseAnchorViewController
+3. 请求和展示数据（这块也是继承父类就行，但是数据这块和父类有所不同）
+
+
+【当前效果】：<br>
