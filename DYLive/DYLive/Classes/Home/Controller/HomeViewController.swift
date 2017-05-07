@@ -47,21 +47,22 @@ class HomeViewController: UIViewController {
         contentVcs.append(RecommendViewController())
         contentVcs.append(GameViewController())
         contentVcs.append(AmuseViewController())
+        contentVcs.append(FunnyViewController())
         
-        for index in 0..<1 {
-            
-            let childVc = UIViewController()
-            
-            if  index % 2 == 0{
-                childVc.view.backgroundColor = UIColor.green
-            }else
-            {
-                childVc.view.backgroundColor = UIColor.yellow
-            }
-            
-            contentVcs.append(childVc)
-            
-        }
+//        for index in 0..<1 {
+//            
+//            let childVc = UIViewController()
+//            
+//            if  index % 2 == 0{
+//                childVc.view.backgroundColor = UIColor.green
+//            }else
+//            {
+//                childVc.view.backgroundColor = UIColor.yellow
+//            }
+//            
+//            contentVcs.append(childVc)
+//            
+//        }
         
         let contentView = PageContentView(frame: contentFrame, childVcs:contentVcs , parentVc: self!)
         contentView.backgroundColor = UIColor.red
