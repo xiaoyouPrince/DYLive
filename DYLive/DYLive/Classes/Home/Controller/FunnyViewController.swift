@@ -8,16 +8,36 @@
 
 import UIKit
 
+private let kTopMargin : CGFloat = 5
+
 class FunnyViewController: BaceAnchorViewController {
+    
+    // MARK: - 懒加载
+    fileprivate lazy var funnyVM : FunnyViewModel = FunnyViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.purple
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.headerReferenceSize = CGSize.zero
+        collectionView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
         
-        super.baceVM = BaseViewModel()
     }
 
+}
 
 
+extension FunnyViewController
+{
+    override func loadData() {
+        
+        super.baceVM = funnyVM
+        
+        self.funnyVM.loadFunnyData { 
+            
+            self.collectionView.reloadData()
+            
+        }
+        
+    }
 }

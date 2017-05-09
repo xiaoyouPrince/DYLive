@@ -67,6 +67,7 @@
 		B4BCB05C1E99419F00DD4B36 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */; };
 		B4C103F81EBA45040069EA6C /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C103F71EBA45040069EA6C /* AmuseMenuView.swift */; };
 		B4C103FA1EBA45140069EA6C /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C103F91EBA45140069EA6C /* AmuseMenuView.xib */; };
+		B4D6A5E81EC1A30600A220C2 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D6A5E71EC1A30600A220C2 /* FunnyViewModel.swift */; };
 		B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD79081E93A35E00F36F8A /* PageContentView.swift */; };
 		B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */; };
 		B4E3DA721E97E8F5000078EC /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */; };
@@ -164,6 +165,7 @@
 		B4BCB05A1E99419F00DD4B36 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		B4C103F71EBA45040069EA6C /* AmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
 		B4C103F91EBA45140069EA6C /* AmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
+		B4D6A5E71EC1A30600A220C2 /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		B4DD79081E93A35E00F36F8A /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4DD790A1E93EA9000F36F8A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B4E3DA711E97E8F5000078EC /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				B43D95EC1EA66A6700EBDAB6 /* RecommendViewModel.swift */,
 				B44E5FA31EB8997800832747 /* GameViewModel.swift */,
 				B45F69151EB9B05E00321E33 /* AmuseViewModel.swift */,
+				B4D6A5E71EC1A30600A220C2 /* FunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				B469DC1E1E9002D100B47BF4 /* PageTitleView.swift in Sources */,
 				B45EC6671EA9DCCC00AA1BA4 /* CollectionCycleCell.swift in Sources */,
 				B44E5FA61EB89B7100832747 /* GameModel.swift in Sources */,
+				B4D6A5E81EC1A30600A220C2 /* FunnyViewModel.swift in Sources */,
 				B45EC6641EA9D59C00AA1BA4 /* CycleModel.swift in Sources */,
 				B45F69141EB991B500321E33 /* AmuseViewController.swift in Sources */,
 				B4DD79091E93A35E00F36F8A /* PageContentView.swift in Sources */,

@@ -113,7 +113,7 @@ extension RecommendViewModel{
 //            dGroup.leave()
 //
 //        }
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: params) { 
+        loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: params) {
             // 请求完成离开队列
             dGroup.leave()
         }
