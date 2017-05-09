@@ -24,7 +24,7 @@ let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
 let kPrettyCellID = "kPrettyCellID"
 
 
-class BaceAnchorViewController: UIViewController {
+class BaceAnchorViewController: BaceViewController {
     
     // MARK: - 懒加载
     var baceVM : BaseViewModel! //定义一个属性，用的时候能直接用
@@ -68,10 +68,15 @@ class BaceAnchorViewController: UIViewController {
 
 extension BaceAnchorViewController{
     
-    func buildUI() {
+    override func buildUI() {
+        
+        
         
         view.addSubview(collectionView)
         
+        contentView = collectionView
+        
+        super.buildUI()
     }
 }
 

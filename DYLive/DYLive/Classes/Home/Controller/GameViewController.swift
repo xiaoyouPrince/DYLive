@@ -19,7 +19,7 @@ private let kGameCellID = "GameCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 
-class GameViewController: UIViewController {
+class GameViewController: BaceViewController {
     
     // MARK: - gameVM
     fileprivate lazy var gameVM : GameViewModel = GameViewModel()
@@ -70,7 +70,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
 
-        creatUI()
+        buildUI()
 
         loadData()
     }
@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
 // MARK: - 创建UI
 extension GameViewController{
     
-    fileprivate func creatUI(){
+    internal func buildUI(){
         
         view.addSubview(collectionView)
         collectionView.addSubview(topHeaderView)
