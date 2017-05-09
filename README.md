@@ -60,3 +60,4 @@
 
 
 【当前效果】：<br>
+![5.06效果](http://oozx6yayl.bkt.clouddn.com/5.06-DYLive.gif)
