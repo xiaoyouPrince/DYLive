@@ -82,12 +82,19 @@ class GameViewController: BaceViewController {
 // MARK: - 创建UI
 extension GameViewController{
     
-    internal func buildUI(){
+    override func buildUI(){
+        
+        
+        super.contentView = collectionView
+        
         
         view.addSubview(collectionView)
         collectionView.addSubview(topHeaderView)
         collectionView.addSubview(gameView)
         collectionView.contentInset = UIEdgeInsetsMake(kGameViewH + kHeaderViewH, 0, kGameViewH + kHeaderViewH, 0)
+        
+        
+        super.buildUI()
         
     }
     
