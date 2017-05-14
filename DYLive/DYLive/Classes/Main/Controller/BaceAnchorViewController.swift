@@ -158,7 +158,7 @@ extension BaceAnchorViewController : UICollectionViewDelegate {
     func showRoomNormalViewController() {
         
         let roomNormal = RoomNormalViewController()
-        
+//        roomNormal.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(roomNormal, animated: true)
         
         

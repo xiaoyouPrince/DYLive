@@ -41,6 +41,7 @@
 		B46E8A5C1E9B2DD60006F5E5 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */; };
 		B48A8DB71EC88FE400C30AA0 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A8DB61EC88FE400C30AA0 /* RoomNormalViewController.swift */; };
 		B48A8DB91EC88FF300C30AA0 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A8DB81EC88FF300C30AA0 /* RoomShowViewController.swift */; };
+		B48A8DBB1EC89D0800C30AA0 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A8DBA1EC89D0800C30AA0 /* CustomNavigationController.swift */; };
 		B48C4CAB1E8CEC28002CD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */; };
 		B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */; };
 		B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CB11E8CEC28002CD3AF /* Assets.xcassets */; };
@@ -136,6 +137,7 @@
 		B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		B48A8DB61EC88FE400C30AA0 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		B48A8DB81EC88FF300C30AA0 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		B48A8DBA1EC89D0800C30AA0 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		B48C4CA71E8CEC28002CD3AF /* DYLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48C4CAF1E8CEC28002CD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				B40438A21E8D0F0800756453 /* MainViewController.swift */,
 				B4D6A5EC1EC1BB7B00A220C2 /* BaceViewController.swift */,
 				B45F691A1EB9D00100321E33 /* BaceAnchorViewController.swift */,
+				B48A8DBA1EC89D0800C30AA0 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				B4902FBF1EA272F900EF7633 /* NSDate+Extension.swift in Sources */,
 				B410CC371EBAFBBC00269F8D /* AmuseMenuViewCell.swift in Sources */,
 				B4E51D261EBF6B6D00A6BCEA /* FunnyViewController.swift in Sources */,
+				B48A8DBB1EC89D0800C30AA0 /* CustomNavigationController.swift in Sources */,
 				B4F3EF521E9B82C600335AF3 /* Commons.swift in Sources */,
 				B45F69191EB9C86B00321E33 /* BaseViewModel.swift in Sources */,
 				B469DC1E1E9002D100B47BF4 /* PageTitleView.swift in Sources */,
