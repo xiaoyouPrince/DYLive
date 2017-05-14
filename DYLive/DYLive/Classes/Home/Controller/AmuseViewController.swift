@@ -51,6 +51,9 @@ extension AmuseViewController{
             tempGroups.removeFirst()
             self.menuView.groups = tempGroups
             
+            
+            // 调用父类的加载完成方法
+            self.loadDataFinished()
         }
     }
 }

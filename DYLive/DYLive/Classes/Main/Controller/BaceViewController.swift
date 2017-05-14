@@ -15,7 +15,7 @@ class BaceViewController: UIViewController {
     fileprivate lazy var imageView : UIImageView = { [unowned self] in
         
         let imageView = UIImageView(image: UIImage(named: "img_loading_1"))
-        imageView.center = self.view.center
+        imageView.center = CGPoint(x:self.view.center.x , y:self.view.center.y - 108 / 2)
         imageView.animationImages = [UIImage(named: "img_loading_1")!,UIImage(named: "img_loading_2")!]
         imageView.animationDuration = 0.5
         imageView.animationRepeatCount = LONG_MAX
@@ -29,6 +29,8 @@ class BaceViewController: UIViewController {
         super.viewDidLoad()
         
         buildUI()
+        
+        
     }
 
 }

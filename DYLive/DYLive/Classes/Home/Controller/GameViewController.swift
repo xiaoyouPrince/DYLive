@@ -113,6 +113,9 @@ extension GameViewController{
             // 外部处理数据
             let games = Array(self.gameVM.games[0..<10])
             self.gameView.groups = games
+            
+            // 调用父类的加载完成方法
+            self.loadDataFinished()
         }
         
     }

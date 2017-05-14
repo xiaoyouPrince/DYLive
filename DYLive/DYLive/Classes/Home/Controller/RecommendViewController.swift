@@ -80,6 +80,9 @@ extension RecommendViewController{
         
             self.gameView.groups = self.recommendVM.anchorGroups
             
+            // 调用父类的加载完成方法
+            self.loadDataFinished()
+            
         }
         
         // MARK: - 请求轮播数据

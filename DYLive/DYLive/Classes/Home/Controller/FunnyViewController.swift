@@ -37,6 +37,9 @@ extension FunnyViewController
             
             self.collectionView.reloadData()
             
+            // 调用父类的加载完成方法
+            self.loadDataFinished()
+            
         }
         
     }
