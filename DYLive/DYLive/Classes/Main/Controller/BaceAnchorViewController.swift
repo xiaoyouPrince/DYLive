@@ -65,7 +65,7 @@ class BaceAnchorViewController: BaceViewController {
 
 }
 
-
+// MARK: - BuildUI
 extension BaceAnchorViewController{
     
     override func buildUI() {
@@ -80,6 +80,7 @@ extension BaceAnchorViewController{
     }
 }
 
+// MARK: - LoadData
 extension BaceAnchorViewController{
     
     func loadData() {
@@ -88,8 +89,8 @@ extension BaceAnchorViewController{
 }
 
 
-
-extension BaceAnchorViewController : UICollectionViewDataSource , UICollectionViewDelegate
+// MARK: - CollectionViewDataSource
+extension BaceAnchorViewController : UICollectionViewDataSource
 {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -130,4 +131,36 @@ extension BaceAnchorViewController : UICollectionViewDataSource , UICollectionVi
     }
     
 
+}
+
+
+// MARK: - CollectionViewDelegate
+extension BaceAnchorViewController : UICollectionViewDelegate {
+    
+    // 被点击的方法
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let anchorGroup = self.baceVM.anchorGroups[indexPath.section]
+        let anchor = anchorGroup.anchors[indexPath.item]
+        
+        // 根据不同类型的主播进入不同的控制器
+//        anchor.isVertical == 0 ? showRoomNormalViewController() : showRoomShowViewController()
+        anchorGroup.tag_name != "星秀" ? showRoomNormalViewController() : showRoomShowViewController()
+    }
+    
+    func showRoomShowViewController() {
+        
+        let roomShow = RoomShowViewController()
+        
+        self.present(roomShow, animated: true, completion: nil)
+    }
+    
+    func showRoomNormalViewController() {
+        
+        let roomNormal = RoomNormalViewController()
+        
+        navigationController?.pushViewController(roomNormal, animated: true)
+        
+        
+    }
 }

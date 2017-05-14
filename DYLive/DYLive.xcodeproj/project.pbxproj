@@ -39,6 +39,8 @@
 		B469DC1E1E9002D100B47BF4 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B469DC1D1E9002D100B47BF4 /* PageTitleView.swift */; };
 		B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E8A591E9B2DD60006F5E5 /* CollectionPrettyCell.swift */; };
 		B46E8A5C1E9B2DD60006F5E5 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */; };
+		B48A8DB71EC88FE400C30AA0 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A8DB61EC88FE400C30AA0 /* RoomNormalViewController.swift */; };
+		B48A8DB91EC88FF300C30AA0 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A8DB81EC88FF300C30AA0 /* RoomShowViewController.swift */; };
 		B48C4CAB1E8CEC28002CD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */; };
 		B48C4CB01E8CEC28002CD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */; };
 		B48C4CB21E8CEC28002CD3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48C4CB11E8CEC28002CD3AF /* Assets.xcassets */; };
@@ -132,6 +134,8 @@
 		B469DC1D1E9002D100B47BF4 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		B46E8A591E9B2DD60006F5E5 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		B46E8A5A1E9B2DD60006F5E5 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		B48A8DB61EC88FE400C30AA0 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		B48A8DB81EC88FF300C30AA0 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		B48C4CA71E8CEC28002CD3AF /* DYLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48C4CAA1E8CEC28002CD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48C4CAF1E8CEC28002CD3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -229,8 +233,8 @@
 			children = (
 				B48C4CAE1E8CEC28002CD3AF /* Main.storyboard */,
 				B40438A21E8D0F0800756453 /* MainViewController.swift */,
-				B45F691A1EB9D00100321E33 /* BaceAnchorViewController.swift */,
 				B4D6A5EC1EC1BB7B00A220C2 /* BaceViewController.swift */,
+				B45F691A1EB9D00100321E33 /* BaceAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,6 +335,39 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B48A8DB21EC88FBB00C30AA0 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				B48A8DB31EC88FBB00C30AA0 /* Controller */,
+				B48A8DB41EC88FBB00C30AA0 /* Model */,
+				B48A8DB51EC88FBB00C30AA0 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		B48A8DB31EC88FBB00C30AA0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B48A8DB61EC88FE400C30AA0 /* RoomNormalViewController.swift */,
+				B48A8DB81EC88FF300C30AA0 /* RoomShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B48A8DB41EC88FBB00C30AA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B48A8DB51EC88FBB00C30AA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B48C4C9E1E8CEC28002CD3AF = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				B49D710B1E8CF93100B73176 /* Main */,
+				B48A8DB21EC88FBB00C30AA0 /* Room */,
 				B49D71091E8CF93100B73176 /* Home */,
 				B49D710A1E8CF93100B73176 /* Live */,
 				B49D71081E8CF93100B73176 /* Follow */,
@@ -761,12 +799,14 @@
 				B46E8A5B1E9B2DD60006F5E5 /* CollectionPrettyCell.swift in Sources */,
 				B4383E251EA8BE5100D1D22B /* CollectionBaseCell.swift in Sources */,
 				B4C103F81EBA45040069EA6C /* AmuseMenuView.swift in Sources */,
+				B48A8DB71EC88FE400C30AA0 /* RoomNormalViewController.swift in Sources */,
 				B4D6A5ED1EC1BB7B00A220C2 /* BaceViewController.swift in Sources */,
 				B4BCB05B1E99419F00DD4B36 /* CollectionNormalCell.swift in Sources */,
 				B45EC66F1EAA015F00AA1BA4 /* CollectionGameCell.swift in Sources */,
 				B4F07A3A1EA3C86D008073A1 /* AnchorGroup.swift in Sources */,
 				B4F3EF551E9B832100335AF3 /* NetworkTools.swift in Sources */,
 				B4DD790B1E93EA9000F36F8A /* UIColor+Extension.swift in Sources */,
+				B48A8DB91EC88FF300C30AA0 /* RoomShowViewController.swift in Sources */,
 				B4E636751EA731DD00775F8E /* AnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
