@@ -43,4 +43,8 @@ extension FunnyViewController
         }
         
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Dlog(message: "我点击了娱乐页面的第\(indexPath.row)个cell")
+    }
 }

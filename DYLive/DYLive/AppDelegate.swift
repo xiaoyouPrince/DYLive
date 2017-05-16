@@ -50,3 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+func Dlog<T>(message : T ,file : String = #file , funName : String = #function , lineNum : Int = #line){
+    
+    let filePath = (file as NSString).lastPathComponent
+    
+    #if DEBUG
+    
+    print("\(filePath):\(funName):\(lineNum)-\(message)")
+    
+    #endif
+
+}
+
