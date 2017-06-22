@@ -1,6 +1,7 @@
 # DYLive
 模仿斗鱼直播app
 
+语言: **Swift 3.0**
 
 ## 每日进度
 
@@ -16,7 +17,7 @@
 
 
 【当前效果】：<br>
-![4.21当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/default.gif)
+![4.21当前效果图.gif](Images/4.21-DYLive.gif)
 
 
 **2017年04月29日 —** <br><br>
@@ -31,7 +32,7 @@
 6. 展示顶部常见游戏数据
 
 【当前效果】：<br>
-![4.29当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/4.29-DYLive.gif)
+![4.29当前效果图.gif](Images/4.29-DYLive.gif)
 
 
 **2017年05月03日 —** <br><br>
@@ -47,7 +48,7 @@
 7. 娱乐页面-进行顶部数据展示
 
 【当前效果】：<br>
-![5.03当前效果图.gif](http://oozx6yayl.bkt.clouddn.com/5.03-DYLive.gif)
+![5.03当前效果图.gif](Images/5.03-DYLive.gif)
 
 
 **2017年05月06日 —** <br><br>
@@ -60,4 +61,6 @@
 
 
 【当前效果】：<br>
-![5.06效果](http://oozx6yayl.bkt.clouddn.com/5.06-DYLive.gif)
+![5.06效果](Images/5.06-DYLive.gif)
+
+
