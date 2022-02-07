@@ -31,7 +31,7 @@ class GameViewController: BaceViewController {
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsetsMake(0, kEdgeMargin, 0, kEdgeMargin)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeMargin, bottom: 0, right: kEdgeMargin)
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         
@@ -41,7 +41,7 @@ class GameViewController: BaceViewController {
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
-        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle:nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
         return collectionView
         
@@ -91,7 +91,7 @@ extension GameViewController{
         view.addSubview(collectionView)
         collectionView.addSubview(topHeaderView)
         collectionView.addSubview(gameView)
-        collectionView.contentInset = UIEdgeInsetsMake(kGameViewH + kHeaderViewH, 0, kGameViewH + kHeaderViewH, 0)
+        collectionView.contentInset = UIEdgeInsets(top: kGameViewH + kHeaderViewH, left: 0, bottom: kGameViewH + kHeaderViewH, right: 0)
         
         
         super.buildUI()
@@ -145,7 +145,7 @@ extension GameViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         
         header.iconImageView.image = UIImage(named: "Img_orange")
         header.nameLabel.text = "全部"

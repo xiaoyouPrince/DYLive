@@ -29,7 +29,7 @@ class CollectionBaseCell: UICollectionViewCell {
             } else {
                 onlineStr = "\(anchor.online)在线"
             }
-            onLineBtn.setTitle(onlineStr, for: UIControlState())
+            onLineBtn.setTitle(onlineStr, for: UIControl.State())
             
             // 2.昵称的显示
             nickNameLabel.text = anchor.nickname

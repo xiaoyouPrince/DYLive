@@ -48,7 +48,7 @@ class BaceAnchorViewController: BaceViewController {
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         // 注册组头
-        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
         
         return collectionView
@@ -58,7 +58,6 @@ class BaceAnchorViewController: BaceViewController {
         super.viewDidLoad()
         
         buildUI()
-
         loadData()
         
     }
@@ -83,6 +82,7 @@ extension BaceAnchorViewController{
 // MARK: - LoadData
 extension BaceAnchorViewController{
     
+    @objc
     func loadData() {
         self.collectionView.reloadData()
     }

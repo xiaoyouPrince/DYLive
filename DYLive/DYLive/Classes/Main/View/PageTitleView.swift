@@ -16,7 +16,7 @@ import UIKit
 
 
 // MARK: - 定义自己代理
-protocol PageTitleViewDelegate : class {
+protocol PageTitleViewDelegate : AnyObject {
     
     // 这里只是方法的定义 --selectIndex index :分别是内部和外部属性
     func pageTitleView(titleView : PageTitleView , selectIndex index : Int)

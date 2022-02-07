@@ -24,19 +24,23 @@ class NetworkTools {
         // 获取类型
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
         
-        Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
-            
-            // 1.校验返回值
-            guard let result = response.result.value else{
-
-                print(response.error!)
-                return
-            }
-            
-            // 2.回调正确的返回
-            finishCallBack(result as AnyObject)
-            
-        }
+//        AF.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
+//
+//            // 1.校验返回值
+//            guard let result = response.result.value else{
+//
+//                print(response.error!)
+//                return
+//            }
+//
+//            // 2.回调正确的返回
+//            finishCallBack(result as AnyObject)
+//
+//        }
+        
+//        AF.request(URLString, method: method, parameters: parameters).responseDecodable { <#DataResponse<Decodable, AFError>#> in
+//            <#code#>
+//        }
     }
     
     

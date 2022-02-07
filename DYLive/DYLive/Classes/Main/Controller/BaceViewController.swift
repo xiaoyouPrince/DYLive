@@ -37,6 +37,7 @@ class BaceViewController: UIViewController {
 
 extension BaceViewController{
     
+    @objc 
     func buildUI() {
         
         self.contentView?.isHidden = true

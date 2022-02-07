@@ -152,7 +152,7 @@ extension RecommendCycleView{
     fileprivate func addCycleTimer() {
         
         cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNextPage), userInfo: nil, repeats: true)
-        RunLoop.main.add( cycleTimer!, forMode: .commonModes)
+        RunLoop.main.add( cycleTimer!, forMode: .common)
     }
     
     
